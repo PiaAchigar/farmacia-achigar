@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
+      <h2>Futuro E-commerce de Hunko Farmacias</h2>
     </div>
   );
 }
