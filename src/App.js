@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Pathbar from "./components/Pathbar/Pathbar";
 import './App.css';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <h2>Futuro E-commerce de Hunko Farmacias</h2>
+      <Pathbar/>
     </div>
   );
 }

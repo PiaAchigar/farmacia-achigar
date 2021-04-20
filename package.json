@@ -45,10 +45,9 @@
     "type": "git",
     "url": "git+https://github.com/PiaAchigar/farmacia-achigar.git"
   },
-  "author": "",
+  "author": "Maria Pia Achigar <achigarpia@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PiaAchigar/farmacia-achigar/issues"
-  },
-  "homepage": "https://github.com/PiaAchigar/farmacia-achigar#readme"
+  }
 }
