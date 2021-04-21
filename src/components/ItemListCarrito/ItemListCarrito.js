@@ -7,6 +7,7 @@ export default function ItemListCarrito(){ // Links
       <div className="carrito-titulo">
         <Cartwidget className="carro"/>
         <h3> Tu Carrito </h3>
+        <h4>Vacio</h4>
       </div>
   )
 }
