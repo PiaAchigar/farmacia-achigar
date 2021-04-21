@@ -1,0 +1,15 @@
+.carrito-titulo{
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    border: 1px solid gray;
+    //position: absolute;
+    .carro{
+        display: flex; //no lo toma
+        justify-content: center;
+    }
+    h3{//no lo toma
+        display: flex;
+        text-align: start;
+    }
+}

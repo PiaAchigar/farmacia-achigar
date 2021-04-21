@@ -4,28 +4,37 @@ header{
    hr{
        border:0.5px solid grey;//no me deja traer los colores
    }
-    div{
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        img{
-            width: 15%;
+   .div-buscar-carro{
+       display: flex;
+       justify-content: space-evenly;
+       width: 100%;
+        .buscador{
             display: flex;
-            justify-content: space-around;
-            
+            justify-content: space-between;
+            width: 90%;
+            img{
+                width: 15%;
+                display: flex;
+                justify-content: space-around;
+            }
+            input{
+                border-radius: 10px;
+                width: 70%;
+                margin: 5px;
+                margin-left: 80px;
+            }
+            .buscar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 4%;
+                border-radius: 10px;
+                border: 1px solid black;
+                margin: 2px;
+            }
         }
-        input{
-            border-radius: 10px;
-            width: 70%;
-            margin: 5px;
-            margin-left: 80px;
-        }
-        .buscar{
-            width: 4%;
-            border-radius: 10px;
-            border: 1px solid black;
-            margin: 2px;
-            justify-content: center;
-            align-items: center;       }
+       .boton{
+           border-radius: 10px;
+       }
     }
 }
