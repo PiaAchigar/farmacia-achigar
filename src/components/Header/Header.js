@@ -1,14 +1,15 @@
 import Navbar from "../Navbar/Navbar";
 import Cartwidget from "../Cartwidget/Cartwidget";
 import logoHunko from "../../assets/HunkoLogo.jpg";
+import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
 import "./Header.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Header = (props) => {
-    const [estaAbierto, setEstaAbierto] = useState(false);
+const Header = () => {
+    const [IsOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
-    setEstaAbierto(!estaAbierto);
+    setIsOpen(!IsOpen);
     };
     return(
         <header>
@@ -23,7 +24,7 @@ const Header = (props) => {
                         <Cartwidget/>
                     </button>
                     {
-                        estaAbierto && props.children
+                        IsOpen && <ItemListCarrito/>
                     }      
                
             </div>    
