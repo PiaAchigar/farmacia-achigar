@@ -1,40 +1,84 @@
-@use "../sass/_colores.sass";
-*
+@import "../Style/colores";
+
 header{
    hr{
-       border:0.5px solid grey;//no me deja traer los colores
+       border:0.5px solid #a8a8a8;
    }
-   .div-buscar-carro{
+   .ham-buscar-carro{
        display: flex;
        justify-content: space-evenly;
-       width: 100%;
+       width: 98%;
+       height: 50px;
+       padding:5px;
+       background-color: #0a994a80;
+       .ham{
+           width: 40px;
+       }
         .buscador{
             display: flex;
-            justify-content: space-between;
-            width: 90%;
+            justify-content: space-evenly;
+            width: 70%;
             img{
-                width: 15%;
-                display: flex;
-                justify-content: space-around;
+                width: 9rem;
             }
-            input{
-                border-radius: 10px;
-                width: 70%;
-                margin: 5px;
-                margin-left: 80px;
+            input{ // max-width: 768
+                display: none;
             }
-            .buscar{
+            button{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 4%;
                 border-radius: 10px;
-                border: 1px solid black;
-                margin: 2px;
+                margin-left: 30px;
+                margin-right: 0;
+                width: 50px;
+                height: 50px;
+                img{
+                    width: 35px;
+                    justify-content: center;
+                }
             }
         }
-       .boton{
-           border-radius: 10px;
+       .boton-carro{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
        }
     }
 }
+@media screen and (min-width: 430px){
+    header{
+        .ham-buscar-carro{
+            display: flex;
+            justify-content: space-evenly;
+            width: 98%;
+            height: 50px;
+            padding:5px;
+            background-color:white;
+            .buscador{
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width: 12rem;
+                }
+                .button{
+                    display: flex;
+                }
+            }
+        }
+        
+
+    }
+}
+@media screen and (min-width: 768px){
+// input{ // max-width: 768
+            //     display: none;
+            //     border-radius: 10px;
+            //     width: 70%;
+            //     margin: 5px;
+            // }
+}
+ 
