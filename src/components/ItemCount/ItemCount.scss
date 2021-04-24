@@ -1,0 +1,19 @@
+.count{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: .5rem;
+    border: 1px solid rgb(187, 186, 186);
+    button{
+        border: none;
+        background-color: white;
+        font-size: 2rem;
+        color: cornflowerblue;
+    }
+    h2{
+        margin:.8rem;
+        width: 3rem;
+        text-align: center;
+        background-color: white;
+    }
+}
