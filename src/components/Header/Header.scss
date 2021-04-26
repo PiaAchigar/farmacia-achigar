@@ -1,6 +1,7 @@
 @import "../Style/colores";
 
 header{
+    width: 100%;
    hr{
        border:0.5px solid #a8a8a8;
    }
@@ -9,7 +10,6 @@ header{
        justify-content: space-evenly;
        width: 98%;
        height: 50px;
-       padding:5px;
        background-color: #0a994a80;
        .ham{
            width: 40px;
@@ -17,22 +17,24 @@ header{
         .buscador{
             display: flex;
             justify-content: space-evenly;
-            width: 70%;
+            //width: 80%;
             img{
                 width: 9rem;
             }
             input{ // max-width: 768
                 display: none;
+                
             }
             button{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                //display: flex;
+                //justify-content: center;
+                //align-items: center;
                 border-radius: 10px;
                 margin-left: 30px;
                 margin-right: 0;
                 width: 50px;
                 height: 50px;
+                right: 5rem;
                 img{
                     width: 35px;
                     justify-content: center;
@@ -40,12 +42,19 @@ header{
             }
         }
        .boton-carro{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+            margin-left: calc(20vw - 2rem);
             border-radius: 10px;
             width: 50px;
             height: 50px;
+            @media screen and (min-width: 425px) {
+                right:-20;
+                //margin-left: calc(30vw - .9rem);
+                
+            }
+            
        }
     }
 }
@@ -59,14 +68,20 @@ header{
             padding:5px;
             background-color:white;
             .buscador{
+                margin: 0 2.5rem 0 1rem;
                 display: flex;
                 justify-content: space-between;
+                width: 80%;
                 img{
                     width: 12rem;
                 }
-                .button{
+                .lupa{
                     display: flex;
                 }
+            }
+            .boton-carro{
+                position: absolute;
+                right:0;
             }
         }
         
@@ -74,6 +89,27 @@ header{
     }
 }
 @media screen and (min-width: 768px){
+    header{
+        .ham-buscar-carro{
+            display: flex;
+            .buscador{
+                display: flex;
+                justify-content: space-evenly;
+                input{
+                    display: flex;
+                    margin: 0 .05rem 0 2rem;
+                    width: 60%;
+                    border:0.5px solid #a8a8a8;
+                    border-radius: 10px;
+                }
+                .lupa{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+
 // input{ // max-width: 768
             //     display: none;
             //     border-radius: 10px;

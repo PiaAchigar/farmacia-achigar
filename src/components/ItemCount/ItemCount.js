@@ -2,11 +2,16 @@ import "./ItemCount.scss";
 //este comp va a una Card y la Card va a ItemListCarrito
 import { useState, useEffect } from "react";
 
-
+//Lo llama ITemListCarrito
 export default function ItemCount( stock, initial, onAdd){
   const [count , setCount] = useState(1);
   const sumar = ()=>{
-    setCount(count + 1);
+    if(count >= stock){
+      setCount(count)
+    }else{
+      setCount(count + 1);
+    }
+    
   };
   const restar = () =>{
     setCount(count -1);
@@ -16,6 +21,7 @@ export default function ItemCount( stock, initial, onAdd){
       alert("Stock 0!")
     }
   }, [count]);
+  
   return(
       <div className="count">
         <button onClick={restar}>-</button>

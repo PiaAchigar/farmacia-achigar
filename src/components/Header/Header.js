@@ -4,6 +4,7 @@ import logoHunko from "../../assets/HunkoLogo.jpg";
 import logoHunkoBN from "../../assets/HunkoLogoBN.png";
 import lupa from "../../assets/lupa.png";
 import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
+import Card from "../Card/Card";
 import "./Header.scss";
 import { useState, useEffect } from "react";
 
@@ -18,7 +19,7 @@ const Header = () => {
     useEffect( ()=>{
         setWidthW(window.innerWidth)
     }, [widthW])
-    
+    //Me falta hacer el menu hamburgueza con un ternario (condicio ? Abra : Cierre)
     return(
         <header>
             <hr/>
@@ -42,16 +43,17 @@ const Header = () => {
                     <button className="lupa"><img src={lupa} alt="lupa"/>
                     </button> 
                 </div>
-                    <button className="boton-carro" onClick={handleClick}>
-                        <Cartwidget/>
-                    </button>
-                    {
-                        IsOpen && <ItemListCarrito/>
-                    }      
+                <button className="boton-carro" onClick={handleClick}>
+                    <Cartwidget/>
+                </button>
+                {
+                    IsOpen && <ItemListCarrito/>
+                }      
                
-            </div>    
+        </div>    
                 <hr/>
             <Navbar/>
+            <Card/>
         </header>
     )
 }

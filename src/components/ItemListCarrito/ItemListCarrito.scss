@@ -1,6 +1,41 @@
 .div-carro{
         display: flex;
         flex-direction: column;
+        width: 60%;
+        justify-content: space-evenly;
+        border: 2px solid gray;
+        border-radius: .5rem;
+        position: absolute;
+        background-color: white;
+        top: 5.4rem;
+        right: .5rem;
+        //margin-left: 28%;
+        //margin-top: calc(19% - .5rem);
+    .carrito-titulo{
+        display: flex;
+        flex-direction: column;
+        //si quiero modificar Cartwidget desde acá, como hago?
+        h3{//no lo toma
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 0;
+        }
+        h4{
+            text-align: center;
+        }
+    }
+    .ItemCount{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+}
+@media sreen and (min-width:1200px){
+    .div-carro{
+        display: flex;
+        flex-direction: column;
         width: 20%;
         justify-content: space-evenly;
         border: 2px solid gray;
@@ -26,4 +61,5 @@
         display: flex;
 
     }
+}
 }
