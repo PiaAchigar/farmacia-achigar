@@ -3,7 +3,7 @@ import "./ItemCount.scss";
 import { useState, useEffect } from "react";
 //import ProductosJson from "../../productos.json";
 
-//Lo llama ITemListCarrito
+//Lo llama ItemListCarrito
 export default function ItemCount( stock, initial){
   
   const [count , setCount] = useState(1);

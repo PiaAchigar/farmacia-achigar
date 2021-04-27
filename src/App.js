@@ -12,6 +12,7 @@
 import Header from "./components/Header/Header";
 import Pathbar from "./components/Pathbar/Pathbar";
 import ItemListCarrito from "./components/ItemListCarrito/ItemListCarrito";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
 import './App.css';
 
@@ -33,9 +34,9 @@ function App() {
       
     </div>
       <Header> {/*donde va? */}
-        <ItemListCarrito/>{}
+        <ItemListCarrito/>
       </Header>
-      <Pathbar/>
+      <ItemListContainer/>
       <Footer />
     </div>
   );

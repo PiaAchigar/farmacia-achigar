@@ -1,12 +1,18 @@
+import { useState, useEffect } from "react";
+import "./Header.scss";
+//Components
 import Navbar from "../Navbar/Navbar";
 import Cartwidget from "../Cartwidget/Cartwidget";
+import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
+import Pathbar from "../Pathbar/Pathbar"
+
+//Imags
 import logoHunko from "../../assets/HunkoLogo.jpg";
 import logoHunkoBN from "../../assets/HunkoLogoBN.png";
 import lupa from "../../assets/lupa.png";
-import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
-import Card from "../Card/Card";
-import "./Header.scss";
-import { useState, useEffect } from "react";
+
+
+
 
 const Header = () => {
     const [IsOpen, setIsOpen] = useState(false);
@@ -53,7 +59,7 @@ const Header = () => {
         </div>    
                 <hr/>
             <Navbar/>
-            <Card/>
+            <Pathbar/>
         </header>
     )
 }

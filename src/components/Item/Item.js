@@ -1,8 +1,8 @@
 //import { MdShoppingCart } from "react-icons/md";
-import "./Card.scss";
+import "./Item.scss";
 import img from "../../multimedia/oferta1.png"
 
-export default function Card (){
+export default function Item (){
 
     return(
        <div className="card">
