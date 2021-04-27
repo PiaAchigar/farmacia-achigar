@@ -7,7 +7,7 @@ export default function Card (){
     return(
        <div className="card">
            <div className="div-img">
-                <img alt="img"/>
+                <img src= {img} style = {{height: "3rem"}} alt="img"/>
            </div>
            <div className="div-descrption">
 
