@@ -2,21 +2,13 @@
 import "./Item.scss";
 //import img from "../../multimedia/oferta1.png"
 
-export default function Item(props){
+export default function Item({product}){
 
     return(
        <div className="card">
-            <div className="div-img">
-                <img src= {props.picture} style = {{height: "3rem"}} alt="img"/>
-           </div>
-           {/*<div className="div-descrption">
-                <p>{descripcion}</p>
-           </div>
-           <div className="div-price-add">
-                <p>$ {precio}</p>
-                <p>Stock disponible</p>
-                <p>{stock}</p>
-           </div> */}
+          <img src= {product.picture} style = {{height: "4rem"}} alt="img"/>
+          <p>{product.title}</p>
+          <p>$ {product.price.amount}</p>
        </div>
     )
 }

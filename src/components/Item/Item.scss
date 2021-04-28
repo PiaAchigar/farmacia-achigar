@@ -1,9 +1,12 @@
 .card{
-    width: 100vw;
-    border: 1px solid red;
-    .div-img{
-        width: 10vw;
-        border: 1px solid green;    
-        size: 1rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    p{
+        align-items: center;
+        margin: .5rem;
     }
 }

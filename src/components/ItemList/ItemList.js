@@ -10,29 +10,27 @@ export default function ItemList(){
         const loadProducts = async()=>{
             const res = await fetch("https://challenge-meli-backend.herokuapp.com/api/items?q=jordan")
             const products = await res.json()
-            console.log(products)
             setProductos(products.items)
         }
         loadProducts()
+        
     },[])
     
     return(
-        <>
-            <div>
-                <h2>Productos</h2>
-            </div>
+        <div className="div-count">
+            
             {
                 products.length > 0 ? (
-                    products.map((prod)=>
-                        <Item prod/>
-                    )
+                    products.map((prod)=>{
+                        return <Item product ={prod}
+                        />
+                    })
                 ) : (
                     <p>No hay productos</p>
                 )
             }
-            {/* recorro el array de obj y se lo voy mandando a Item */}
           
-        </>
+        </div>
     )
 }
 //https://raw.githubusercontent.com/PiaAchigar/mockejson/main/productos.json
