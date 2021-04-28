@@ -10,7 +10,6 @@
 
 //Componentes
 import Header from "./components/Header/Header";
-import Pathbar from "./components/Pathbar/Pathbar";
 import ItemListCarrito from "./components/ItemListCarrito/ItemListCarrito";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";

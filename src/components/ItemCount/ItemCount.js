@@ -26,7 +26,7 @@ export default function ItemCount( stock, initial){
   
   function onAdd(value){
       //debo enviar la cantidad seleccionada por el usuario, no me doy cuenta como
-      const cantSelected = value 
+      //const cantSelected = value 
   }
 
 

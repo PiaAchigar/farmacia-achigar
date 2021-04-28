@@ -11,7 +11,7 @@ export default function ItemListCarrito(){ // Links
           <h3>Tu Carrito</h3>
           <h4>Vacio</h4>
         </div>
-        <div className="ItemCount"><ItemCount /></div>
+        <div className="ItemCount"><ItemCount stock = '2'/></div>
       </div>
   )
 }
