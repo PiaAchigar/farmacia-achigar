@@ -8,7 +8,7 @@ export default function ItemList(){
     
     useEffect(()=>{
         const loadProducts = async()=>{
-            const res = await fetch("https://challenge-meli-backend.herokuapp.com/api/items?q=jordan")
+            const res = await fetch("https://challenge-meli-backend.herokuapp.com/api/items?q=dermocosmetica")
             const products = await res.json()
             setProductos(products.items)
         }

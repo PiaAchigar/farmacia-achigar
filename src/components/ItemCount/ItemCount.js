@@ -1,6 +1,6 @@
 import "./ItemCount.scss";
-//este comp va a una Card y la Card va a ItemListCarrito
-import { useState, useEffect } from "react";
+//este comp va a ir insertado en ItemDetalis y si preciona "Agregar" va a ItemListCarrito
+import { useState } from "react";
 //import ProductosJson from "../../productos.json";
 
 //Lo llama ItemListCarrito
@@ -17,12 +17,6 @@ export default function ItemCount( stock, initial){
   const restar = () =>{
     setCount(count -1);
   };
-  useEffect(()=>{
-    if(count < 1 || stock === 0){
-      alert("Stock 0!")
-      setCount(count) // si el contador ya llego a cero  o no hay stock el clic no tiene efecto
-    }
-  }, [count]);
   
   function onAdd(value){
       //debo enviar la cantidad seleccionada por el usuario, no me doy cuenta como
