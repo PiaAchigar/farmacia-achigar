@@ -1,29 +1,279 @@
-nav{
+@use "../Style/colores";
+
+.nav-container{
+    width: 100%;
     display: flex;
-    text-decoration: none;
-    width: 98%;
-    justify-content: space-evenly;
-    background-color:rgb(51, 51, 51);
-    box-shadow: 0px 1px 6px 1px #00000080;
-    .menu-categorias{
+    flex-direction: column;
+    hr{
         width: 98%;
-        ul{
+        border:0.5px solid #a8a8a8;
+        margin: .5rem 0 .5rem 0;
+    }
+    .ham-buscar-carro{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        background-color: #0a994a80;
+        .ham{
+            width: 35px;
             display: flex;
-            justify-content: space-evenly;
-            width: 98%;
-            text-align: center;
-            padding: 0%;
-            margin: 0%;
-            li{
-                margin: .2rem;
-                list-style: none;
-                font-size: .9rem;
-                color: white;
-                @media screen and (min-width: 768px){
-                    font-size: 1.2rem;
-                    margin: .5rem;
+            .bg-close {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100vh;
+                cursor: pointer;
+                opacity: 1;
+                -webkit-animation: appear 1s ease-in-out;
+                animation: appear 0.5s ease-in-out;
+            
+                @-webkit-keyframes appear {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                @keyframes appear {
+                    from {
+                      opacity: 0;
+                    }
+                    to {
+                      opacity: 1;
+                    }
+                  }
+            }
+            .sidenav__open {
+                margin:.5rem 0 0 .1rem;
+                color: rgb(61, 60, 60);
+                width: 3rem;
+                cursor: pointer;
+            
+                @media screen and (min-width: 768px) {
+                  display: none;
+                }
+              }
+              .sidenav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(15, 15, 15, 0.548);
+                width: 50%;
+                height: 70vh;
+                position: fixed;
+                top: 4.6rem;
+                left: 0;
+                opacity: 1;
+                z-index: 99;
+                -webkit-animation: appear 1s ease-in-out;
+                animation: appear 0.5s ease-in-out;
+            
+                    @-webkit-keyframes appear {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                    }
+                
+                    @keyframes appear {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                    }
+                }
+                .sidenav__close {
+                    margin-top: 5rem;
+                    color: rgb(71, 71, 71);
+                    width: 10%;
+                    padding-left: 70%;
+                    cursor: pointer;
+                }
+              
+                ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                height: 300px;
+                position: absolute;
+                top: 6rem;
+            
+                li {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+            
+                    .sidenav__link {
+                    color: rgb(71, 71, 71);
+            
+                        &:hover {
+                            border-bottom: solid 2px gray;
+                        }
+                    }
+                    // .active {
+                    // color: black;
+                    // font-weight: 600;
+                    // }
+                }
+            }
+
+        }
+         .buscador{
+             display: flex;
+             justify-content: space-evenly;
+             img{
+                 width: 8.4rem;
+             }
+             input{ // max-width: 768
+                 display: none;
+             }
+             button{
+                 border-radius: 10px;
+                 margin-left: 30px;
+                 margin-right: 0;
+                 width: 50px;
+                 height: 50px;
+                 right: 5rem;
+                 img{
+                     width: 35px;
+                     justify-content: center;
+                 }
+             }
+         }
+        .boton-carro{
+            position: absolute;
+            left: 2.9rem;
+             border-radius: 10px;
+             width: 50px;
+             height: 50px;
+             @media screen and (min-width: 425px) {
+                 //right:-20;
+                 //margin-left: calc(30vw - .9rem);
+                 
+             }
+             
+        }
+     }
+
+    .main-categories{
+        display: none;
+        .navLink{
+            color: white;
+            text-decoration: none;
+        }
+        .avtive-navlink{
+            background-color:gray;
+            border-radius: 5px;
+            padding: .5rem;
+        }
+    }
+}
+    //..................
+    @media screen and (min-width: 430px){
+        .nav-container{
+            .ham-buscar-carro{
+                background-color:white;
+               
+                    .buscador{
+                        //margin: 0 2.5rem 0 1rem;
+                        display: flex;
+                        justify-content: center;
+                        width: 80%;
+                        img{
+                            width: 12rem;
+                        }
+                        .lupa{
+                            position: absolute;
+                            right: 1rem;
+                        }
+                    }
+              
+            }
+    
+        }
+    }
+    @media screen and (min-width: 768px){
+        .nav-container{
+            .ham-buscar-carro{
+                display: flex;
+                .buscador{
+                    display: flex;
+                    justify-content: space-evenly;
+                    input{
+                        display: flex;
+                        margin: 0 5rem 0 2rem;
+                        width: 60%;
+                        border:0.5px solid #a8a8a8;
+                        border-radius: 10px;
+                    }
+                    input::placeholder{
+                        padding: 15px;
+                    }
+                    .lupa{
+                        position: absolute;
+                        right: 1.5rem;
+                    }
+                }
+            }
+            .main-categories{
+                display: flex;
+                text-decoration: none;
+                width: 98%;
+                justify-content: space-evenly;
+                background-color:rgb(51, 51, 51);
+                box-shadow: 0px 1px 6px 1px #00000080;
+                width: 98%;
+                ul{
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 98%;
+                    text-align: center;
+                    padding: 0%;
+                    margin: 0%;
+                    li{
+                        margin: .2rem;
+                        list-style: none;
+                        font-size: .9rem;
+                        color: white;
+                        @media screen and (min-width: 768px){
+                            font-size: 1.2rem;
+                            margin: .5rem;
+                        }
+                    }
                 }
             }
         }
     }
-}
+    @media screen and (min-width: 1200px){
+        .nav-container{
+            .ham-buscar-carro{
+                display: flex;
+                .buscador{
+                    display: flex;
+                    justify-content: space-evenly;
+                    input{
+                        display: flex;
+                        margin: 0 5rem 0 2rem;
+                        width: 60%;
+                        border:0.5px solid #a8a8a8;
+                        border-radius: 10px;
+                    }
+                    input::placeholder{
+                        padding: 15px;
+                    }
+                    .lupa{
+                        position: absolute;
+                        right: 2rem;
+                    }
+                }
+            }
+        }
+    }

@@ -4,7 +4,7 @@ const Pathbar = () => {
     return(
         <header>
             <nav>
-
+                <p>Ruta/</p>
             </nav>
 
         </header>
