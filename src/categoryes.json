@@ -1,0 +1,40 @@
+{
+    "categoryes":
+    [{
+        "id":0,
+        "category": "Farmacia"
+    },
+    {
+        "id":1,
+        "category": "Electrofarmacia"
+    },
+    {
+        "id":2,
+        "category": "Perfumeria"
+    },
+    {
+        "id":3,
+        "category": "Perfumeria Mujer"
+    },
+    {
+        "id":4,
+        "category": "Perfumeria Hombre"
+    },
+    {
+        "id":5,
+        "category": "Dermocosmetica"
+    },
+    {
+        "id":6,
+        "category": "Maquillaje"
+    },
+    {
+        "id":7,
+        "category": "Electrobelleza"
+    },
+    {
+        "id":8,
+        "category": "Ofertas"
+    }
+]
+}

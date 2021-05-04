@@ -3,14 +3,15 @@ import { useState , useEffect } from "react";
 import Item from "../Item/Item";
 
 
-export default function ItemList(){
+export default function ItemList({id}){
     const [products, setProductos] = useState([]);
     
     useEffect(()=>{
         const loadProducts = async()=>{
-            const res = await fetch("https://challenge-meli-backend.herokuapp.com/api/items?q=dermocosmetica")
+            const res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items?q=${id}`)
             const products = await res.json()
             setProductos(products.items)
+            //console.log(products.items)
         }
         loadProducts()
         

@@ -1,10 +1,12 @@
 import "./ItemListContainer.scss";
 import ItemList from "../ItemList/ItemList";
+//import ArrayCategoryes from "../../categoryes.json";
 
-export default function ItemListContainer(){
+export default function ItemListContainer({id}){
+  
     return(
         <div>
-            <ItemList/>
+            <ItemList id={id}/>
         </div>
     )
 }

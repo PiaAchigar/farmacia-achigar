@@ -30,11 +30,11 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/carrito" component={Carrito} />
-            <Route path="/dermocosmetica" component={Dermocosmetica} />
+            <Route path="/dermocosmetica/:dermocosmetica" component={Dermocosmetica} />
             <Route path="/farmacia" component={Farmacia} />
-            <Route path="/maquillaje" component={Maquillaje} />
-            <Route path="/perfumeria" component={Perfumeria} />
-            <Route path="/ofertas" component={Ofertas} />
+            <Route path="/maquillaje/:maquillaje" component={Maquillaje} />
+            <Route path="/perfumeria/:perfumes" component={Perfumeria} />
+            <Route path="/ofertas/:ofertas" component={Ofertas} />
           </Switch>
         
         <Footer />
