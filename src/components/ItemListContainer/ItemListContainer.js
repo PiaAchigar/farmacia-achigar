@@ -1,12 +1,15 @@
 import "./ItemListContainer.scss";
 import ItemList from "../ItemList/ItemList";
-//import ArrayCategoryes from "../../categoryes.json";
+import { useParams } from "react-router-dom";
 
-export default function ItemListContainer({id}){
+//Maneja los cambios de Categoría
+export default function ItemListContainer(){
+  //const params = useParams() //es el idCategoria
+ //console.log(params.categoryId)
   
     return(
         <div>
-            <ItemList id={id}/>
+            <ItemList/>
         </div>
     )
 }

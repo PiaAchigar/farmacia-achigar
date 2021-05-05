@@ -15,6 +15,15 @@ import logoHunko from "../../assets/HunkoLogo.jpg";
 import logoHunkoBN from "../../assets/HunkoLogoBN.png";
 import lupa from "../../assets/lupa.png";
 
+//Paginas
+// import Home from "./pages/Home";
+// import Carrito from "./pages/Carrito";
+// import Dermocosmetica from "./pages/Dermocosmetica";
+// import Farmacia from "./pages/Farmacia";
+// import Maquillaje from "./pages/Maquillaje";
+// import Perfumeria from "./pages/Perfumeria";
+// import Ofertas from "./pages/Ofertas";
+
 //Style
 import "./Navbar.scss";
 
@@ -50,28 +59,28 @@ const Navbar = () => {
                                     </div>
                                     <ul>
                                     <li>
-                                        <NavLink onClick={handleNav} className="sidenav__link" to="/" exact>
+                                        <NavLink exact to="/" onClick={handleNav} className="sidenav__link" to="/" exact>
                                         Inicio
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink onClick={handleNav} className="sidenav__link" to="/perfumeria">
+                                        <NavLink to="/Perfumeria" onClick={handleNav} className="sidenav__link" to="/perfumeria">
                                         Perfumeria
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink onClick={handleNav} className="sidenav__link" to="/dermocosmetica">
+                                        <NavLink to="/Dermocosmética" onClick={handleNav} className="sidenav__link" to="/dermocosmetica">
                                         Dermocosmética
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink onClick={handleNav} className="sidenav__link" to="/farmacia">
+                                        <NavLink to="/Farmacia" onClick={handleNav} className="sidenav__link" to="/farmacia">
                                         Farmacia
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li>
-                                        <NavLink onClick={handleNav} className="sidenav__link" to="/ofertas">
+                                        <NavLink to="/Ofertas" onClick={handleNav} className="sidenav__link" to="/ofertas">
                                         Ofertas
                                         </NavLink>
                                     </li>
@@ -99,7 +108,7 @@ const Navbar = () => {
                     <Cartwidget/>
                 </button>
                 {
-                    IsOpen && <ItemListCarrito/>
+                    IsOpen && <ItemListCarrito/>// todo : poner un Link dentro de ese ItemListCarrito
                 }      
                
             </div>    
@@ -107,24 +116,24 @@ const Navbar = () => {
             <div className="main-categories">
                 <ul>
                     <li>
-                        <NavLink exact to="/" activeClassName="avtive-navlink" className="navLink">
+                        <NavLink exact to="/" activeClassName="active-navlink" className="navLink">
                         Inicio
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/ofertas" activeClassName="avtive-navlink" className="navLink">
+                        <NavLink to="/category/oferta" activeClassName="active-navlink" className="navLink">
                         Ofertas
                         </NavLink>
                     </li>
-                    <li><NavLink to="/dermocosmetica" activeClassName="avtive-navlink" className="navLink">
+                    <li><NavLink to="/category/dermocosmetica" activeClassName="active-navlink" className="navLink">
                         Dermocosmetica
                         </NavLink>
                     </li>
-                    <li><NavLink to="/perfumeria" activeClassName="avtive-navlink" className="navLink">
+                    <li><NavLink to="/category/perfumemujer" activeClassName="active-navlink" className="navLink">
                         Perfumeria
                         </NavLink>
                     </li>
-                    <li><NavLink to="/farmacia" activeClassName="avtive-navlink" className="navLink">
+                    <li><NavLink to="/category/medicamentos" activeClassName="active-navlink" className="navLink">
                         Farmacia
                         </NavLink>
                     </li>

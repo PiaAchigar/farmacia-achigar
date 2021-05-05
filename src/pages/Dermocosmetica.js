@@ -1,15 +1,18 @@
 import React from "react";
-import { useParams } from "react-router";
+//import { useParams } from "react-router";
+import { Link, useParams } from "react-router-dom";
 
 //Componentes
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+//import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 
 const Dermocosmetica = () => {
-  const {dermocosmetica} = useParams()
+  //const id = useParams()
   return (
     <div className="page-wrapper">
       <h1>Pagina de Dermocosmetica</h1>
-      <ItemListContainer id={dermocosmetica}/>
+      {/* <p>Mi id es:{id}</p> */}
+      {/* <Link to="/ItemListContainer/:dermocosmetica"><ItemListContainer/></Link> */}
+      
     </div>
   );
 };

@@ -4,21 +4,16 @@ import './App.css';
 //Routeador
 import {BrowserRouter , Switch, Route} from 'react-router-dom';
 
-//Paginas
-import Home from "./pages/Home";
-import Carrito from "./pages/Carrito";
-import Dermocosmetica from "./pages/Dermocosmetica";
-import Farmacia from "./pages/Farmacia";
-import Maquillaje from "./pages/Maquillaje";
-import Perfumeria from "./pages/Perfumeria";
-import Ofertas from "./pages/Ofertas";
+
 
 //Componentes
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListCarrito from "./components/ItemListCarrito/ItemListCarrito";
-//import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 
+//Los Links le pasan la info a los Routers
 
 function App() {
   return (
@@ -28,13 +23,15 @@ function App() {
           <ItemListCarrito/>
         </Navbar>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/carrito" component={Carrito} />
-            <Route path="/dermocosmetica/:dermocosmetica" component={Dermocosmetica} />
-            <Route path="/farmacia" component={Farmacia} />
-            <Route path="/maquillaje/:maquillaje" component={Maquillaje} />
-            <Route path="/perfumeria/:perfumes" component={Perfumeria} />
-            <Route path="/ofertas/:ofertas" component={Ofertas} />
+            <Route exact path="/">
+              <ItemListContainer/>
+            </Route>
+            <Route path="/category/:categoryId">
+              <ItemListContainer/>
+            </Route>
+            <Route path="/item/:idProducto">
+              <ItemDetailContainer/>
+            </Route>
           </Switch>
         
         <Footer />

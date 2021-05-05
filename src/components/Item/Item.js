@@ -1,5 +1,5 @@
 //import { MdShoppingCart } from "react-icons/md";
-///import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+//import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import "./Item.scss";
 import {Link} from  'react-router-dom';
 //Tengo q usar useParams
@@ -7,7 +7,7 @@ import {Link} from  'react-router-dom';
 //Ver diapo 35 :)
 // de aca tengo q mandarlo a ItemDetailsContainer
 
-export default function Item({product, key}){
+export default function Item({product}){
    //   function handleClick(e) {
    //        e.preventDefault();
    //        console.log('Item Cliqueado');
@@ -16,11 +16,13 @@ export default function Item({product, key}){
    //      }
 
     return(
-       <div className="card" key = {key}>
-         <Link exact to = {`/itemDetailContainer/${product.id}`}>
-            <img src= {product.picture} style = {{height: "4rem"}} alt="img"/>
-            <p>{product.title}</p>
-            <p>$ {product.price.amount}</p>
+       <div className="card">
+         <Link exact to = {`/item/${product.id}`}>
+            <span>
+               <img src= {product.picture} style = {{height: "4rem"}} alt="img"/>
+               <p>{product.title}</p>
+               <p>$ {product.price.amount}</p>
+            </span>   
           </Link>
        </div>
 

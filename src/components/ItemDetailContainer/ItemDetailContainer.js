@@ -1,35 +1,38 @@
 import "./ItemDetailContainer.scss";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useState , useEffect } from "react";
+import {useParams} from "react-router-dom";
 
-export default function ItemDetailContainer({idProducto}){
+export default function ItemDetailContainer(){
     const [products, setProductos] = useState([]);
-    const {idProducto} = useParams();
-    
+    const props = useParams();
+    console.log("estoy dentro de ItemDetailContainer"+ props.idProducto)
+    //JSON.stringify(props)
     useEffect(()=>{
         const loadProducts = async()=>{
             const res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items`)
             const products = await res.json()
             setProductos(products.items)
-            console.log(products.items)
+            //console.log(products.items)
         }
         loadProducts()
         
     },[])
 
-    const getItem = (idProducto) =>{
-       return products.find((idProducto)=> product.id ===idProducto)
+    const getItem = (props) =>{
+        console.log("dentro IDC func getItem:" + props)
+       return products.find((idP)=> idP === props)
     }
     
 
     return(
         <div>
             <h2>Estoy en ItemDetailComponent</h2>
-            
+            {/* <div>Id producto {JSON.stringify(idProducto)}</div> */}
             <ItemDetail 
-            idProducto = {getItem(idProducto).id}
-            nombre = {getItem(idProducto).title}
-            foto = {getItem(idProducto).picture}
+            idProd = {props.idProducto}
+            // nombre = {getItem(props.idProducto).title}
+            // foto = {getItem(props.idProducto).picture}
             
             />
         </div>

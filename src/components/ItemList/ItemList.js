@@ -1,20 +1,32 @@
 import "./ItemList.scss";
 import { useState , useEffect } from "react";
 import Item from "../Item/Item";
+import { useParams } from "react-router-dom";
 
-
-export default function ItemList({id}){
-    const [products, setProductos] = useState([]);
+export default function ItemList(){
+    const props = useParams()
+    const [products, setProducts] = useState([]);
+    console.log("ItemList"+ props.categoryId)
     
     useEffect(()=>{
-        const loadProducts = async()=>{
-            const res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items?q=${id}`)
-            const products = await res.json()
-            setProductos(products.items)
-            //console.log(products.items)
-        }
-        loadProducts()
-        
+            const loadProducts = async()=>{
+                let res = ""
+                let products = ""
+                console.log("entro al loadProducts")
+                if(!props.categoryId){ //si el props.categoryId es vacio, entra
+                     console.log("entro al if")
+                    res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items?q=farmacia`)
+                    products = await res.json()
+                    setProducts(products.items)
+                   // setProductos([...products, products.items])
+                }else{
+                    console.log ("entro al if" + props.categoryId)
+                    res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items?q=${props.categoryId}`)
+                    products = await res.json()
+                    setProducts(products.items)
+                }
+            }
+            loadProducts()
     },[])
     
     return(
@@ -22,8 +34,8 @@ export default function ItemList({id}){
             
             {
                 products.length > 0 ? (
-                    products.map((prod, idx)=>{
-                        return <Item product ={prod} key={idx}/>
+                    products.map((prod)=>{
+                        return <Item product ={prod}/>
                     })
                 ) : (
                     <p>No hay productos</p>
