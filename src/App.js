@@ -13,7 +13,7 @@ import ItemListCarrito from "./components/ItemListCarrito/ItemListCarrito";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 
-//Los Links le pasan la info a los Routers
+//Los Links le pasan la info a los Routerse
 
 function App() {
   return (

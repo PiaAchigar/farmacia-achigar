@@ -21,7 +21,7 @@ export default function ItemDetailContainer(){
 
     const getItem = (props) =>{
         console.log("dentro IDC func getItem:" + props)
-       return products.find((idP)=> idP === props)
+       return products.find((idP)=> idP === props) // no logoro aun que me devuelva el obj...
     }
     
 
@@ -39,18 +39,34 @@ export default function ItemDetailContainer(){
     )
 }
 
- //cuando se abre, tiene q tener un efecto de montaje=UseEffect
-    //debe llamar a un async mock(promice) que en 2 seg le devuelva el item y lo guardo en un State
-    // const getItem= () =>{
-    //     //f(x) que retorna la promesa con delay
 
-    // }
 
-    // function ItemDetailContainer(){
-    //     //Implementar mock invocando a getItems() y utilizando el resolver then return /* JSX que devuelva un ItemDetail (desafío 6b) */
-        
 
-    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

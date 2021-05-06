@@ -11,4 +11,3 @@ export default function ItemDetail({idProd, nombre, foto}){
         </div>
     )
 }
-//Vista del Producto con su img, detalle y precio 
