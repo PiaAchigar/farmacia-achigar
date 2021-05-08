@@ -1,17 +1,21 @@
 import "./Item.scss";
 import {Link} from  'react-router-dom';
-
+import Presencacion from "../Presentacion/Presentacion";
 export default function Item({product}){
 
     return(
        <div className="card">
-         <Link exact to = {`/item/${product.id}`}>
+         
             <span>
-               <img src= {product.picture} style = {{height: "4rem"}} alt="img"/>
-               <p>{product.title}</p>
-               <p>$ {product.price.amount}</p>
+            <Link exact to = {`/item/${product.id}`} className="link-item">
+               <img src= {product.foto ? require(`../multimedia/${product.foto}`).default : ''} style = {{height: "10rem"}} alt="img"/>
+               {console.log("Foto Item:"+product.foto)}
+               <h3>{product.marca}</h3>
+               <h3>{product.nombre}</h3>
+            </Link>
+            <Presencacion present ={product.presentacion}/>
             </span>   
-          </Link>
+         
        </div>
 
     )
@@ -19,7 +23,8 @@ export default function Item({product}){
 
 
 
-
+//src={product.img ? require(`../rutadelaimagen/${product.img}`).default : ''}
+//Import imagen from '../rutadekmagen'
 
 
 

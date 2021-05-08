@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ItemListCarrito from "./components/ItemListCarrito/ItemListCarrito";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
+import Cart from "./components/Cart/Cart"
 
 //Los Links le pasan la info a los Routerse
 
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route path="/item/:idProducto">
               <ItemDetailContainer/>
+            </Route>
+            <Route path="/cart">
+              <Cart/>
             </Route>
           </Switch>
         

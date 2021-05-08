@@ -59,28 +59,28 @@ const Navbar = () => {
                                     </div>
                                     <ul>
                                     <li>
-                                        <NavLink exact to="/" onClick={handleNav} className="sidenav__link" to="/" exact>
+                                        <NavLink exact to="/" onClick={handleNav} className="sidenav__link" >
                                         Inicio
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/Perfumeria" onClick={handleNav} className="sidenav__link" to="/perfumeria">
+                                        <NavLink to="/category/Perfumeria" onClick={handleNav} className="sidenav__link">
                                         Perfumeria
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/Dermocosmética" onClick={handleNav} className="sidenav__link" to="/dermocosmetica">
+                                        <NavLink to="/category/Dermocosmética" onClick={handleNav} className="sidenav__link">
                                         Dermocosmética
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/Farmacia" onClick={handleNav} className="sidenav__link" to="/farmacia">
+                                        <NavLink to="/category/Farmacia" onClick={handleNav} className="sidenav__link">
                                         Farmacia
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li>
-                                        <NavLink to="/Ofertas" onClick={handleNav} className="sidenav__link" to="/ofertas">
+                                        <NavLink to="/category/oferta" onClick={handleNav} className="sidenav__link">
                                         Ofertas
                                         </NavLink>
                                     </li>
@@ -129,11 +129,11 @@ const Navbar = () => {
                         Dermocosmetica
                         </NavLink>
                     </li>
-                    <li><NavLink to="/category/perfumemujer" activeClassName="active-navlink" className="navLink">
+                    <li><NavLink to="/category/perfumeria" activeClassName="active-navlink" className="navLink">
                         Perfumeria
                         </NavLink>
                     </li>
-                    <li><NavLink to="/category/medicamentos" activeClassName="active-navlink" className="navLink">
+                    <li><NavLink to="/category/farmacia" activeClassName="active-navlink" className="navLink">
                         Farmacia
                         </NavLink>
                     </li>

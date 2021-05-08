@@ -1,45 +1,48 @@
 import "./ItemDetailContainer.scss";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { useState , useEffect } from "react";
 import {useParams} from "react-router-dom";
+import ProductosJson from "../../productos.json";
+import { useEffect, useState } from "react";
 
 export default function ItemDetailContainer(){
-    const [products, setProductos] = useState([]);
-    const props = useParams();
-    console.log("estoy dentro de ItemDetailContainer"+ props.idProducto)
-    //JSON.stringify(props)
+    const {idProducto} = useParams();
+    const [ItemDetalle, setItemDetalle] = useState([])
+    console.log("estoy dentro de ItemDetailContainer"+ idProducto)
+
     useEffect(()=>{
-        const loadProducts = async()=>{
-            const res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items`)
-            const products = await res.json()
-            setProductos(products.items)
-            //console.log(products.items)
-        }
-        loadProducts()
-        
-    },[])
-
-    const getItem = (props) =>{
-        console.log("dentro IDC func getItem:" + props)
-       return products.find((idP)=> idP === props) // no logoro aun que me devuelva el obj...
-    }
+        const varDetail = ProductosJson.find((product) => console.log(product.id) === idProducto)
+        console.log("varDetail:"+ varDetail)
+         setItemDetalle(varDetail)
+    },[idProducto])
     
-
     return(
         <div>
-            <h2>Estoy en ItemDetailComponent</h2>
-            {/* <div>Id producto {JSON.stringify(idProducto)}</div> */}
-            <ItemDetail 
-            idProd = {props.idProducto}
-            // nombre = {getItem(props.idProducto).title}
-            // foto = {getItem(props.idProducto).picture}
-            
-            />
+            <ItemDetail idProd = {ItemDetalle} />
         </div>
     )
 }
 
+//JSON.stringify(props)
+    // const getProducts = (produst)=>{
 
+    // }
+    // useEffect(()=>{
+    //     const loadProducts = async()=>{
+    //         const res = await fetch(`https://challenge-meli-backend.herokuapp.com/api/items?q=${props.idProducto}`)
+    //         const products = await res.json()
+    //         setProductos(products.items)
+    //         console.log(products.items)
+    //     }
+    //     loadProducts()
+        
+    // },[])
+
+    // const getItem = (producto) =>{
+    //     console.log("dentro IDC func getItem:" + props)
+    //    return products.map((p)=> p.idProducto===producto)
+    // }
+    
+//products.find((idP)=> idP === props) // no logro aun que me devuelva el obj...
 
 
 
