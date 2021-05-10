@@ -1,7 +1,8 @@
-.div-count{
+.div-countainer{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:15px;
     margin: 2%;
-  
+    //border: 1px solid red;
+    flex-direction: row;
 }

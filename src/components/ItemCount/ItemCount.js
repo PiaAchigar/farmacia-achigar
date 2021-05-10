@@ -25,13 +25,13 @@ export default function ItemCount( stock, initial){
 
 
   return(
-      <div>
+      <div className="div-count">
         <div className="count">
           <button onClick={restar}>-</button>
           <h2>{count}</h2>
           <button onClick={sumar}>+</button>
         </div>
-         <button onClick={onAdd} value = {count}>Agregar</button>
+         <button className="btn-agregar" onClick={onAdd} value = {count}>Agregar</button>
       </div>
   )
 }

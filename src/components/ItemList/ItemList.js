@@ -34,7 +34,7 @@ export default function ItemList(){
     },[props])
     
     return(
-        <div className="div-count">
+        <div className="div-countainer">
             
             {
                 arrayFilterProducts.length > 0 ? (

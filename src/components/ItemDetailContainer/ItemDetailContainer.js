@@ -8,9 +8,10 @@ export default function ItemDetailContainer(){
     const {idProducto} = useParams();
     const [ItemDetalle, setItemDetalle] = useState([])
     console.log("estoy dentro de ItemDetailContainer"+ idProducto)
-
+    console.log(ProductosJson)
     useEffect(()=>{
-        const varDetail = ProductosJson.find((product) => console.log(product.id) === idProducto)
+        console.log(ProductosJson)
+        const varDetail = ProductosJson.find((product) => Number(product.id) === Number(idProducto))
         console.log("varDetail:"+ varDetail)
          setItemDetalle(varDetail)
     },[idProducto])
