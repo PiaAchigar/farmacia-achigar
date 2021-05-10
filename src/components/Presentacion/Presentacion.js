@@ -6,7 +6,9 @@ export default function Presentacion({present}){
     return(
         <div className="radio">
             {present.map((prod, key)=>{
+                
                 return   <><label>
+                            {key}
                             <input type="radio" value="{prod.codigo}" className="input-presentacion"/>
                             {prod.tamanio}ml----${prod.precio}
                             </label>
