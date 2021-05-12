@@ -23,10 +23,10 @@ export default function ItemList(){
             let arrayFilter = result.filter((product) =>product.categoria === props.categoryId)
             console.log(arrayFilter)
             setArrayFilterProducts(arrayFilter)
-            // if(!props.categoryId){
-            //     console.log("dentro del if"+props.categoryId)
-            //    setArrayFilterProducts(result)
-            // }  
+            if(!props.categoryId){
+                console.log("dentro del if"+props.categoryId)
+               setArrayFilterProducts(result)
+            }  
             console.log(arrayFilterProducts)
             return arrayFilterProducts
         })

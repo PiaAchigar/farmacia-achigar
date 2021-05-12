@@ -5,7 +5,7 @@ export default function Presentacion({present}){
 
     return(
         <div className="radio">
-            {present.map((prod, key)=>{
+            {present && present.map((prod, key)=>{
                 
                 return   <><label>
                             {key}

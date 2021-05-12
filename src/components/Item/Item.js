@@ -1,29 +1,20 @@
 import "./Item.scss";
 import {Link} from  'react-router-dom';
-import Presencacion from "../Presentacion/Presentacion";
 export default function Item({product}){
-
     return(
        <div className="card">
             <span>
-            <Link exact to = {`/item/${product.id}`} className="link-item">
-               <img src= {product.foto ? require(`../multimedia/${product.foto}`).default : ''} style = {{height: "10rem"}} alt="img"/>
-               
-               <h3>{product.marca}</h3>
-               <h3>{product.nombre}</h3>
-            </Link>
-            <Presencacion present ={product.presentacion}/>
+               <Link exact to = {`/item/${product.id}`} className="link-item">
+                  <img src= {product.foto ? require(`../multimedia/${product.foto}`).default : ''} style = {{height: "10rem"}} alt="img"/>
+                  <h3>{product.marca}</h3>
+                  <h3>{product.nombre}</h3>
+               </Link>
             </span>   
-         
        </div>
-
     )
 }
 
 
-
-//src={product.img ? require(`../rutadelaimagen/${product.img}`).default : ''}
-//Import imagen from '../rutadekmagen'
 
 
 
