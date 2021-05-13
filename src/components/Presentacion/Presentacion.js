@@ -1,19 +1,34 @@
+import { useState } from "react";
 import "./Presentacion.scss";
-
+import ProductosJson from "../../productos.json"
 
 export default function Presentacion({present}){
-
+    const [formData, setformData] = useState({
+        isAgree : false, //checkbox
+        selected : "" //radio
+    })
+    const handelChange = event =>{
+        console.log (event.target.value)
+        //const select = event.targt.name
+        
+        const value = event.target.value
+        //const prod = ProductosJson.find((item)=> item.find((present) => present.codigo === event.target.value))
+       
+        console.log(prod.nombre)
+        // setformData({
+        //     ...formData,
+        // [select] : value
+        // })
+    }
     return(
+        
         <div className="radio">
             {present && present.map((prod, key)=>{
-                
                 return   <><label>
-                            {key}
-                            <input type="radio" value="{prod.codigo}" className="input-presentacion"/>
-                            {prod.tamanio}ml----${prod.precio}
+                            <input type="radio" value={prod.codigo} className="input-presentacion" key = {key} name = "selected" onChange = {handelChange}/>
+                            {prod.tamanio}----${prod.precio}
                             </label>
                         </>
-                        
             })}
             
         </div>
