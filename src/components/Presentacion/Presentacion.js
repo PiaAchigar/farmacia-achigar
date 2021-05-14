@@ -13,7 +13,8 @@ export default function Presentacion({present}){
         
         const value = event.target.value
         //const prod = ProductosJson.find((item)=> item.find((present) => present.codigo === event.target.value))
-       
+       //https://www.youtube.com/watch?v=wF0drGBIZ_k
+       //https://www.pluralsight.com/guides/how-to-use-radio-buttons-in-reactjs
         console.log(prod.nombre)
         // setformData({
         //     ...formData,

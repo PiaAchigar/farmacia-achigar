@@ -33,7 +33,7 @@ function App() {
             <Route path="/item/:idProducto">
               <ItemDetailContainer/>
             </Route>
-            <Route path="/cart">
+            <Route path="/cart/:codigoItem">
               <Cart/>
             </Route>
           </Switch>

@@ -3,26 +3,10 @@
         "categoria": "perfumeria",
         "marca": "Carolina Herrera",
         "nombre": "Good-Girl",
-        "presentacion": [
-          {
-            "tamanio": 100,
-            "precio":10800,
-            "codigo":7798656800,
-            "stock": 2
-          },
-          {
-            "tamanio": 80,
-            "precio":9800,
-            "codigo":7798656801,
-            "stock": 1
-          },
-          {
-            "tamanio": 50,
-            "precio":7800,
-            "codigo":7798656802,
-            "stock": 1
-          }
-        ],
+        "tamanio": 100,
+        "precio":10800,
+        "codigo":7798656800,
+        "stock": 2,
         "foto": "goodGirlCH.jpg",
         "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -31,20 +15,10 @@
           "categoria": "perfumeria",
           "marca": "Ralph Lauren",
           "nombre": "Ralph",
-          "presentacion": [
-            {
-              "tamanio": 80,
-              "precio":9800,
-              "codigo":7798656810,
-              "stock": 3
-            },
-            {
-              "tamanio": 50,
-              "precio":9000,
-              "codigo":7798656811,
-              "stock": 1
-            }
-          ],
+          "tamanio": 80,
+          "precio":9800,
+          "codigo":7798656810,
+          "stock": 3,
           "foto": "ralphLaurenEDTMujer.jpg",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -53,49 +27,22 @@
           "categoria": "perfumeria",
           "marca": "Paco Rabanne",
           "nombre": "Black-XS",
-          "presentacion": [
-            {
-              "tamanio": 80,
-              "precio":9600,
-              "codigo":7798656820,
-              "stock": 1
-            },
-            {
-              "tamanio": 50,
-              "precio":8700,
-              "codigo":7798656821,
-              "stock": 4
-            }
-          ],
+          "tamanio": 80,
+          "precio":9600,
+          "codigo":7798656820,
+          "stock": 1,
           "foto": "pacoRBlackXSMujer.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
-          
         {
           "id":4,
           "categoria": "perfumeria",
           "marca": "Lancome",
           "nombre": "Idole",
-          "presentacion": [
-            {
-              "tamanio": 75,
-              "precio":14600,
-              "codigo":7798656830,
-              "stock": 3
-            },
-            {
-              "tamanio": 50,
-              "precio":10700,
-              "codigo":7798656831,
-              "stock": 2
-            },
-            {
-              "tamanio": 25,
-              "precio":9900,
-              "codigo":7798656832,
-              "stock": 1
-            }
-          ],        
+          "tamanio": 75,
+          "precio":14600,
+          "codigo":7798656830,
+          "stock": 3,        
           "foto": "idole.jpg",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
       },   
@@ -104,26 +51,10 @@
           "categoria": "perfumeria",
           "marca": "Yves Saint Laurent",
           "nombre": "Opium-Black",
-          "presentacion": [
-            {
-              "tamanio": 100,
-              "precio":11600,
-              "codigo":7798656840,
-              "stock": 5
-            },
-            {
-              "tamanio": 80,
-              "precio":10000,
-              "codigo":7798656841,
-              "stock": 1
-            },
-            {
-              "tamanio": 50,
-              "precio":9900,
-              "codigo":7798656842,
-              "stock": 1
-            }
-          ],
+          "tamanio": 100,
+          "precio":11600,
+          "codigo":7798656840,
+          "stock": 5,
           "foto": "BlackOpiumYvesSLMujer.jpg",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -132,26 +63,10 @@
           "categoria": "perfumeria",
           "marca": "Nina-Ricci",
           "nombre": "Ruge",
-          "presentacion": [
-            {
-              "tamanio": 80,
-              "precio":11600,
-              "codigo": 7798656850,
-              "stock": 2
-            },
-            {
-              "tamanio": 50,
-              "precio":10100,
-              "codigo":7798656851,
-              "stock": 6
-            },
-            {
-              "tamanio": 30,
-              "precio":9900,
-              "codigo":7798656852,
-              "stock": 1
-            }
-          ],
+          "tamanio": 80,
+          "precio":11600,
+          "codigo": 7798656850,
+          "stock": 2,
           "foto": "ninaRougeMujer.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -160,20 +75,10 @@
             "categoria": "perfumeria",
             "marca": "Cacharel",
             "nombre": "Anais-Anais",
-            "presentacion": [
-              {
-                "tamanio": 50,
-                "precio":9200,
-                "codigo":7798656860,
-                "stock": 1
-              },
-              {
-                "tamanio": 30,
-                "precio":7700,
-                "codigo":7798656861,
-                "stock": 2
-              }
-            ],
+            "tamanio": 50,
+            "precio":9200,
+            "codigo":7798656860,
+            "stock": 1,
             "foto": "AnaisAnaisCacha.png",
             "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
          },
@@ -182,26 +87,10 @@
           "categoria": "perfumeria",
           "marca": "Calvin Klein",
           "nombre": "Eternity",
-          "presentacion": [
-            {
-              "tamanio": 120,
-              "precio":10600,
-              "codigo":7798656870,
-              "stock": 2
-            },
-            {
-              "tamanio": 75,
-              "precio":9700,
-              "codigo":7798656871,
-              "stock": 1
-            },
-            {
-              "tamanio": 50,
-              "precio":8500,
-              "codigo":7798656872,
-              "stock": 1
-            }
-          ],
+          "tamanio": 120,
+          "precio":10600,
+          "codigo":7798656870,
+          "stock": 2,
           "foto": "calvinKleinEternMujer.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
           },
@@ -210,26 +99,10 @@
           "categoria": "perfumeria",
           "marca": "Tommy Hilfiger",
           "nombre": "Tommy-Girl",
-          "presentacion": [
-            {
-              "tamanio": 100,
-              "precio":11200,
-              "codigo":7798656880,
-              "stock": 1
-            },
-            {
-              "tamanio": 75,
-              "precio":10600,
-              "codigo":7798656881,
-              "stock": 2
-            },
-            {
-              "tamanio": 50,
-              "precio":9300,
-              "codigo":7798656882,
-              "stock": 1
-            }
-          ],
+          "tamanio": 100,
+          "precio":11200,
+          "codigo":7798656880,
+          "stock": 1,
           "foto": "tommyGirl.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -238,20 +111,10 @@
           "categoria": "perfumeria",
           "marca": "Givenchy",
           "nombre": "L´interdit",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":10700,
-              "codigo":7798656890,
-              "stock": 1
-            },
-            {
-              "tamanio": 30,
-              "precio":9100,
-              "codigo":7798656891,
-              "stock": 3
-            }
-          ],
+          "tamanio": 50,
+          "precio":10700,
+          "codigo":7798656890,
+          "stock": 1,
           "foto": "linterditGivenchyMujer.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -260,20 +123,10 @@
           "categoria": "perfumeria",
         "marca": "Dior",
         "nombre": "Jador",
-        "presentacion": [
-          {
-            "tamanio": 100,
-            "precio":14600,
-            "codigo":7798656900,
-            "stock": 5
-          },
-          {
-            "tamanio": 50,
-            "precio":10700,
-            "codigo":7798656901,
-            "stock": 1
-          }
-        ],
+        "tamanio": 100,
+        "precio":14600,
+        "codigo":7798656900,
+        "stock": 5,
         "foto": "JadorDior.png",
         "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -282,26 +135,10 @@
           "categoria": "perfumeria",
           "marca": "Kenzo",
           "nombre": "L´eau-Kenzo",
-          "presentacion": [
-            {
-              "tamanio": 75,
-              "precio":10200,
-              "codigo":7798656910,
-              "stock": 3
-            },
-            {
-              "tamanio": 50,
-              "precio":9350,
-              "codigo":7798656911,
-              "stock": 2
-            },
-            {
-              "tamanio": 30,
-              "precio":7920,
-              "codigo":7798656912,
-              "stock": 3
-            }
-          ],
+          "tamanio": 75,
+          "precio":10200,
+          "codigo":7798656910,
+          "stock": 3,
           "foto": "LeauKenzoMujer.png",
           "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
@@ -310,20 +147,10 @@
           "categoria": "farmacia",
           "marca": "Roemmers",
           "nombre": "Sertal Perlas",
-          "presentacion": [
-            {
-              "tamanio": 10,
-              "precio":200,
-              "codigo":7798657000,
-              "stock": 2
-            },
-            {
-              "tamanio": 20,
-              "precio":350,
-              "codigo":7798657001,
-              "stock": 1
-            }
-          ],
+          "tamanio": 10,
+          "precio":200,
+          "codigo":7798657000,
+          "stock": 2,
           "foto": "sertalPerlas.jpg",
           "descripcion":"Antiespasmódico, analgésico"
         },
@@ -332,20 +159,10 @@
           "categoria": "farmacia",
           "marca": "Bayer",
           "nombre": "Actron 400",
-          "presentacion": [
-            {
-              "tamanio": 10,
-              "precio":300,
-              "codigo":7798657002,
-              "stock": 5
-            },
-            {
-              "tamanio": 20,
-              "precio":450,
-              "codigo":7798657003,
-              "stock": 10
-            }
-          ],
+          "tamanio": 10,
+          "precio":300,
+          "codigo":7798657002,
+          "stock": 5,
           "foto": "actron400.jpg",
           "descripcion":"Ibuprofeno. Alivia los dolores asociados a estados gripales, resfrío común y para bajar la fiebre."
         },
@@ -354,20 +171,10 @@
           "categoria": "farmacia",
           "marca": "Elea",
           "nombre": "Tafirol Plus",
-          "presentacion": [
-            {
-              "tamanio": 8,
-              "precio":280,
-              "codigo":7798657004,
-              "stock": 5
-            },
-            {
-              "tamanio": 16,
-              "precio":350,
-              "codigo":7798657005,
-              "stock": 10
-            }
-          ],
+          "tamanio": 8,
+          "precio":280,
+          "codigo":7798657004,
+          "stock": 5,
           "foto": "tafirolPlus.jpg",
           "descripcion":"Paracetamol y Diclofenac."
         },
@@ -376,26 +183,10 @@
           "categoria": "farmacia",
           "marca": "Atom",
           "nombre": "Barbijo Atom Protect",
-          "presentacion": [
-            {
-              "tamanio": 3,
-              "precio":450,
-              "codigo":7798657006,
-              "stock": 5
-            },
-            {
-              "tamanio": 2,
-              "precio":450,
-              "codigo":7798657007,
-              "stock": 10
-            },
-            {
-              "tamanio": 1,
-              "precio":450,
-              "codigo":7798657008,
-              "stock": 10
-            }
-          ],
+          "tamanio": 3,
+          "precio":450,
+          "codigo":7798657006,
+          "stock": 5,
           "foto": "barbijoAtom.jpg",
           "descripcion":"Barbijo con Nanotecnología, dura 15 lavados. Talle 1->6-9años, Talle 2->9-12, Talle 3->Adultos"
         },
@@ -404,14 +195,10 @@
           "categoria": "oferta",
           "marca": "Bagovit 2x1",
           "nombre": "Bagovit Solar",
-          "presentacion": [
-            {
-              "tamanio": 300,
-              "precio":450,
-              "codigo":7798657009,
-              "stock": 10
-            }
-          ],
+          "tamanio": 300,
+          "precio":450,
+          "codigo":7798657009,
+          "stock": 10,
           "foto": "oferta1.png",
           "descripcion":"Protector Solar."
         },
@@ -420,14 +207,10 @@
           "categoria": "oferta",
           "marca": "Cicatrcure 2x1",
           "nombre": "Cicatricure Anti-Edad",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":1450,
-              "codigo":7798657010,
-              "stock": 10
-            }
-          ],
+          "tamanio": 50,
+          "precio":1450,
+          "codigo":7798657010,
+          "stock": 10,
           "foto": "oferta2.png",
           "descripcion":"Reduce lineas de exprecion y arrugas."
         },
@@ -436,14 +219,10 @@
           "categoria": "oferta",
           "marca": "Nivea 2x1",
           "nombre": "Toallitas desmaquillantes Nivea",
-          "presentacion": [
-            {
-              "tamanio": 30,
-              "precio":450,
-              "codigo":7798657011,
-              "stock": 10
-            }
-          ],
+          "tamanio": 30,
+          "precio":450,
+          "codigo":7798657011,
+          "stock": 10,
           "foto": "oferta3.png",
           "descripcion":"Limpieza diaria."
         },
@@ -452,14 +231,10 @@
           "categoria": "oferta",
           "marca": "Livopen",
           "nombre": "Livopen",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":450,
-              "codigo":7798657012,
-              "stock": 10
-            }
-          ],
+          "tamanio": 50,
+          "precio":450,
+          "codigo":7798657012,
+          "stock": 10,
           "foto": "oferta5.png",
           "descripcion":"Repelente de mosquitos."
         },
@@ -468,14 +243,10 @@
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Hidratación Inteligente",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":2250,
-              "codigo":7798657013,
-              "stock": 5
-            }
-          ],
+          "tamanio": 50,
+          "precio":2250,
+          "codigo":7798657013,
+          "stock": 5,
           "foto": "serumAW.png",
           "descripcion":"Serum hidratación profunda."
         },
@@ -484,14 +255,10 @@
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Aminocelular Nutritiva",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":3450,
-              "codigo":7798657014,
-              "stock": 10
-            }
-          ],
+          "tamanio": 50,
+          "precio":3450,
+          "codigo":7798657014,
+          "stock": 10,
           "foto": "aminocelularNutritivaAW.png",
           "descripcion":"Crema de noche."
         },
@@ -500,14 +267,10 @@
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Anti-Age",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":3450,
-              "codigo":7798657015,
-              "stock": 10
-            }
-          ],
+          "tamanio": 50,
+          "precio":3450,
+          "codigo":7798657015,
+          "stock": 10,
           "foto": "AntoageNutriPielSecaAW.png",
           "descripcion":"Crema para todos los días."
         },
@@ -516,14 +279,10 @@
           "categoria": "dermocosmetica",
           "marca": "Laroche-posay",
           "nombre": "Hyalu B5",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":6450,
-              "codigo":7798657016,
-              "stock": 1
-            }
-          ],
+          "tamanio": 50,
+          "precio":6450,
+          "codigo":7798657016,
+          "stock": 1,
           "foto": "hyalub5.png",
           "descripcion":"Serum con Acido Hyaluronico."
         },
@@ -532,14 +291,10 @@
           "categoria": "dermocosmetica",
           "marca": "Laroche-posay",
           "nombre": "Vitamina C10",
-          "presentacion": [
-            {
-              "tamanio": 50,
-              "precio":6450,
-              "codigo":7798657017,
-              "stock": 1
-            }
-          ],
+          "tamanio": 50,
+          "precio":6450,
+          "codigo":7798657017,
+          "stock": 1,
           "foto": "vitc10.png",
           "descripcion":"Serum con vitamina C."
         }

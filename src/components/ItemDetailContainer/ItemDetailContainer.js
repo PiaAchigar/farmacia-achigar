@@ -7,12 +7,10 @@ import { useEffect, useState } from "react";
 export default function ItemDetailContainer(){
     const {idProducto} = useParams();
     const [ItemDetalle, setItemDetalle] = useState([])
-    console.log("estoy dentro de ItemDetailContainer"+ idProducto)
-    console.log(ProductosJson)
+    
     useEffect(()=>{
         console.log(ProductosJson)
         const varDetail = ProductosJson.find((product) => product.id == idProducto)
-        console.log("varDetail:"+ varDetail)
          setItemDetalle(varDetail)
     },[idProducto])
     

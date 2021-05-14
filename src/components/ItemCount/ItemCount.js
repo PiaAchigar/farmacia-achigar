@@ -4,25 +4,23 @@ import { useState } from "react";
 //import ProductosJson from "../../productos.json";
 
 //Lo llama ItemListCarrito
-export default function ItemCount( stock, initial){
-  
+export default function ItemCount( {stock, add}){
+  //console.log(props)
   const [count , setCount] = useState(1);
   const sumar = () =>{
     if(count >= stock){
       setCount(count)
     }else{
-      setCount(count + 1);
+      setCount(count + 1)
     }
   };
   const restar = () =>{
-    setCount(count -1);
+    if(count<= 1){
+      setCount(count)
+    }else{
+      setCount(count -1)
+    }
   };
-  
-  function onAdd(value){
-      //debo enviar la cantidad seleccionada por el usuario, no me doy cuenta como
-      //const cantSelected = value 
-  }
-
 
   return(
       <div className="div-count">
@@ -31,7 +29,8 @@ export default function ItemCount( stock, initial){
           <h2>{count}</h2>
           <button onClick={sumar}>+</button>
         </div>
-         <button className="btn-agregar" onClick={onAdd} value = {count}>Agregar</button>
+        <p>Stock:{stock}</p>
+         <button className="btn-agregar" onClick={add} value = {count}>Agregar</button>
       </div>
   )
 }
