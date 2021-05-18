@@ -3,8 +3,10 @@ import "./ItemCount.scss";
 import { useState } from "react";
 //import ProductosJson from "../../productos.json";
 
-//Lo llama ItemListCarrito
+
+//sacar todo de aca y llevarlo a itemDetail / capturo el numero seleccionado con el context number = useState q esta en CartContext
 export default function ItemCount( {stock, add}){
+ 
   //console.log(props)
   const [count , setCount] = useState(1);
   const sumar = () =>{

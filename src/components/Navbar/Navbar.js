@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 //Iconos
-import { MdClose } from "react-icons/md";
-import { MdMenu } from "react-icons/md";
+import { MdClose } from "react-icons/md"
+import { MdMenu } from "react-icons/md"
 
 //Componentes
-import Cartwidget from "../Cartwidget/Cartwidget";
-import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
+import {CartContext} from "../../CartContext"
+import Cartwidget from "../Cartwidget/Cartwidget"
+import ItemListCarrito from "../ItemListCarrito/ItemListCarrito"
 import Pathbar from "../Pathbar/Pathbar"
 
 //Imags
-import logoHunko from "../../assets/HunkoLogo.jpg";
-import logoHunkoBN from "../../assets/HunkoLogoBN.png";
-import lupa from "../../assets/lupa.png";
+import logoHunko from "../../assets/HunkoLogo.jpg"
+import logoHunkoBN from "../../assets/HunkoLogoBN.png"
+import lupa from "../../assets/lupa.png"
 
 //Paginas
 // import Home from "./pages/Home";
@@ -30,7 +31,7 @@ import "./Navbar.scss";
 const Navbar = () => {
     const [IsOpen, setIsOpen] = useState(false);
     const [widthW, setWidthW] = useState(window.innerWidth);
-
+    const quantity = useContext(CartContext)
     const handleClick = () => {
     setIsOpen(!IsOpen);
     };
@@ -101,11 +102,10 @@ const Navbar = () => {
                        )
                    }
                     <input type="text" placeholder="¿Qué estás buscando?"/>
-                    <button className="lupa"><img src={lupa} alt="lupa"/>
-                    </button> 
+                    <button className="lupa"><img src={lupa} alt="lupa"/></button> 
                 </div>
                 <button className="boton-carro" onClick={handleClick}>
-                    <Cartwidget/>
+                    <Cartwidget itemsQuantity = {quantity}/>
                 </button>
                 {
                     IsOpen && <ItemListCarrito/>// todo : poner un Link dentro de ese ItemListCarrito

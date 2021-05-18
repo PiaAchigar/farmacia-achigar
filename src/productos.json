@@ -1,5 +1,6 @@
 [{
         "id": 1,
+        "quantity":1,
         "categoria": "perfumeria",
         "marca": "Carolina Herrera",
         "nombre": "Good-Girl",
@@ -12,6 +13,7 @@
         },
         {
           "id":2,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Ralph Lauren",
           "nombre": "Ralph",
@@ -24,6 +26,7 @@
         },
         {
           "id":3,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Paco Rabanne",
           "nombre": "Black-XS",
@@ -36,6 +39,7 @@
         },
         {
           "id":4,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Lancome",
           "nombre": "Idole",
@@ -48,6 +52,7 @@
       },   
         {
           "id":5,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Yves Saint Laurent",
           "nombre": "Opium-Black",
@@ -60,6 +65,7 @@
         },
         {
           "id":6,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Nina-Ricci",
           "nombre": "Ruge",
@@ -72,6 +78,7 @@
         },
           {
             "id":7,
+            "quantity":1,
             "categoria": "perfumeria",
             "marca": "Cacharel",
             "nombre": "Anais-Anais",
@@ -84,6 +91,7 @@
          },
         {
           "id":8,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Calvin Klein",
           "nombre": "Eternity",
@@ -96,6 +104,7 @@
           },
         {
           "id":9,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Tommy Hilfiger",
           "nombre": "Tommy-Girl",
@@ -108,6 +117,7 @@
         },
         {
           "id":10,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Givenchy",
           "nombre": "L´interdit",
@@ -120,18 +130,20 @@
         },
         {
           "id":11,
+          "quantity":1,
           "categoria": "perfumeria",
-        "marca": "Dior",
-        "nombre": "Jador",
-        "tamanio": 100,
-        "precio":14600,
-        "codigo":7798656900,
-        "stock": 5,
-        "foto": "JadorDior.png",
-        "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
+          "marca": "Dior",
+          "nombre": "Jador",
+          "tamanio": 100,
+          "precio":14600,
+          "codigo":7798656900,
+          "stock": 5,
+          "foto": "JadorDior.png",
+          "descripcion":"Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro."
         },
         {
           "id":12,
+          "quantity":1,
           "categoria": "perfumeria",
           "marca": "Kenzo",
           "nombre": "L´eau-Kenzo",
@@ -144,6 +156,7 @@
         },
         {
           "id":13,
+          "quantity":1,
           "categoria": "farmacia",
           "marca": "Roemmers",
           "nombre": "Sertal Perlas",
@@ -156,6 +169,7 @@
         },
         {
           "id":14,
+          "quantity":1,
           "categoria": "farmacia",
           "marca": "Bayer",
           "nombre": "Actron 400",
@@ -168,6 +182,7 @@
         },
         {
           "id":15,
+          "quantity":1,
           "categoria": "farmacia",
           "marca": "Elea",
           "nombre": "Tafirol Plus",
@@ -180,6 +195,7 @@
         },
         {
           "id":16,
+          "quantity":1,
           "categoria": "farmacia",
           "marca": "Atom",
           "nombre": "Barbijo Atom Protect",
@@ -192,6 +208,7 @@
         },
         {
           "id":17,
+          "quantity":1,
           "categoria": "oferta",
           "marca": "Bagovit 2x1",
           "nombre": "Bagovit Solar",
@@ -204,6 +221,7 @@
         },
         {
           "id":18,
+          "quantity":1,
           "categoria": "oferta",
           "marca": "Cicatrcure 2x1",
           "nombre": "Cicatricure Anti-Edad",
@@ -216,6 +234,7 @@
         },
         {
           "id":19,
+          "quantity":1,
           "categoria": "oferta",
           "marca": "Nivea 2x1",
           "nombre": "Toallitas desmaquillantes Nivea",
@@ -228,6 +247,7 @@
         },
         {
           "id":20,
+          "quantity":1,
           "categoria": "oferta",
           "marca": "Livopen",
           "nombre": "Livopen",
@@ -240,6 +260,7 @@
         },
         {
           "id":21,
+          "quantity":1,
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Hidratación Inteligente",
@@ -252,6 +273,7 @@
         },
         {
           "id":22,
+          "quantity":1,
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Aminocelular Nutritiva",
@@ -264,6 +286,7 @@
         },
         {
           "id":23,
+          "quantity":1,
           "categoria": "dermocosmetica",
           "marca": "Artez Westerley",
           "nombre": "Anti-Age",
@@ -276,6 +299,7 @@
         },
         {
           "id":24,
+          "quantity":1,
           "categoria": "dermocosmetica",
           "marca": "Laroche-posay",
           "nombre": "Hyalu B5",
@@ -288,6 +312,7 @@
         },
         {
           "id":25,
+          "quantity":1,
           "categoria": "dermocosmetica",
           "marca": "Laroche-posay",
           "nombre": "Vitamina C10",

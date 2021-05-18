@@ -1,10 +1,11 @@
 import { MdShoppingCart } from "react-icons/md";
 import "./Cartwidget.scss";
-// es solo el icono del carrito - CartWidget = artilugio
-const Cartwidget = () => {
+//CartWidget = artilugio
+const Cartwidget = ({itemsQuantity=0}) => {
     return(
-       <div>
+       <div className="div-cartWidget">
            <MdShoppingCart size="2rem"/>
+           <p>({itemsQuantity})</p>
        </div>
     )
 }

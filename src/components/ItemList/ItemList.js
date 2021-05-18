@@ -7,7 +7,6 @@ import ProductosJson from "../../productos.json";
 export default function ItemList(){
     const props = useParams()
     const [arrayFilterProducts, setArrayFilterProducts] = useState([])
-    console.log("ItemList"+ props.categoryId)
     
     const getProducts = (products)=>{
         return new Promise((res, rej)=>{
@@ -21,10 +20,8 @@ export default function ItemList(){
         getProducts(ProductosJson).then(result=>{
             console.log(result)
             let arrayFilter = result.filter((product) =>product.categoria === props.categoryId)
-            console.log(arrayFilter)
             setArrayFilterProducts(arrayFilter)
             if(!props.categoryId){
-                console.log("dentro del if"+props.categoryId)
                setArrayFilterProducts(result)
             }  
             console.log(arrayFilterProducts)
@@ -35,7 +32,6 @@ export default function ItemList(){
     
     return(
         <div className="div-countainer">
-            
             {
                 arrayFilterProducts.length > 0 ? (
                     arrayFilterProducts.map((prod, key)=>{
