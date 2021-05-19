@@ -9,7 +9,7 @@ export default function ItemDetailContainer(){
     const [ItemDetalle, setItemDetalle] = useState([])
     
     useEffect(()=>{
-        console.log(ProductosJson)
+        //console.log(ProductosJson)
         const varDetail = ProductosJson.find((product) => product.id == idProducto)
          setItemDetalle(varDetail)
     },[idProducto])

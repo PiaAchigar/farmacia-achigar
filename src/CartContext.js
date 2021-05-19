@@ -1,12 +1,11 @@
 import {useState, createContext} from "react";
 //import ProductosJson from "./productos.json"
 
-export const CartContext = createContext([]) // lo importo cuando quiero usar la info de acá
-
+export const CartContext = createContext({}) // lo importo cuando quiero usar la info de acá
+//export const CartProvider = CartContext.Provider
 export const CartProvider = ({children}) =>{ // provee de la info, se usa solo 1 vez haciendo wrap (en app) a los compon que quiero q accedan a la info, la pasa
-   const defaultValue = useState([])
     const [quantity, setQuantity] = useState(0)
-    const [arrayCart,setArrayCart] = useState(defaultValue)
+    const [arrayCart,setArrayCart] = useState([])
 
     //si item no esta en arrayCart, sumarlo
     //isInCart(codigo) true/false
@@ -18,16 +17,16 @@ export const CartProvider = ({children}) =>{ // provee de la info, se usa solo 1
     }
     //addItem(item, )
     const addItem = (item, number)=>{
-        console.log("addItem:")
-        console.log(item)
-        console.log(number)
+        console.log("addItem:", item)
+        console.log("number:",number)
         if(isInCart(item.codigo)){
             setQuantity(item.quantity+=number)
             console.log("item repetido...")
-            //como seteo , sumo esa cantidad a un ojb ya existente dentro de mi array??
         }else{
             item.quantity = number
-            setArrayCart([...arrayCart, {...item, quantity:number}])
+            console.log(item.quantity)
+            setArrayCart([...arrayCart, item])
+            console.log("else, arrayCarrito:", arrayCart)
         }
         console.log("context:"+quantity)
         console.log(arrayCart)
@@ -49,7 +48,7 @@ export const CartProvider = ({children}) =>{ // provee de la info, se usa solo 1
 
     
     return(
-        <CartContext.Provider value={{arrayCart, addItem}}>
+        <CartContext.Provider value={{arrayCart, addItem, quantity}}>
             {children}
         </CartContext.Provider>
     )

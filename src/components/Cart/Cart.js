@@ -5,10 +5,11 @@ import {useContext} from "react"
 import {CartContext} from "../../CartContext"
 
 export default function Cart(){
-    const value = useContext(CartContext) //para usar el arrayCart
+    const {arrayCart} = useContext(CartContext) //para usar el arrayCart
     //para mostrar cuantos productos va hago arrayCart.length 
     const {codigoItem} = useParams();
     console.log(codigoItem)
+    console.log(arrayCart)
     return(
         <div>
             Item Seleccionado : {codigoItem}

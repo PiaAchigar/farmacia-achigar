@@ -1,7 +1,7 @@
 import { MdShoppingCart } from "react-icons/md";
 import "./Cartwidget.scss";
 //CartWidget = artilugio
-const Cartwidget = ({itemsQuantity=0}) => {
+const Cartwidget = ({itemsQuantity}) => {
     return(
        <div className="div-cartWidget">
            <MdShoppingCart size="2rem"/>

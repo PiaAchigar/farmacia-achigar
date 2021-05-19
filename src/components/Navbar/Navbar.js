@@ -31,7 +31,7 @@ import "./Navbar.scss";
 const Navbar = () => {
     const [IsOpen, setIsOpen] = useState(false);
     const [widthW, setWidthW] = useState(window.innerWidth);
-    const quantity = useContext(CartContext)
+    const {quantity} = useContext(CartContext)
     const handleClick = () => {
     setIsOpen(!IsOpen);
     };

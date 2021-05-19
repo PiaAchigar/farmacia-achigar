@@ -12,19 +12,19 @@ export default function ItemList(){
         return new Promise((res, rej)=>{
             setTimeout(()=>{
                 return res(products)
-            },1000)
+            },200)
         })
     }
 
     useEffect(()=>{
         getProducts(ProductosJson).then(result=>{
-            console.log(result)
+            //console.log(result)
             let arrayFilter = result.filter((product) =>product.categoria === props.categoryId)
             setArrayFilterProducts(arrayFilter)
             if(!props.categoryId){
                setArrayFilterProducts(result)
             }  
-            console.log(arrayFilterProducts)
+            //console.log(arrayFilterProducts)
             return arrayFilterProducts
         })
        
@@ -37,8 +37,8 @@ export default function ItemList(){
                     arrayFilterProducts.map((prod, key)=>{
                         return <Item product ={prod} key={prod.id}/>
                     })
-                ) : (+
-                    <p>No hay productos</p>
+                ) : (
+                    <p></p>
                 )
             }
           

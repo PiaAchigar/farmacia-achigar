@@ -1,7 +1,7 @@
 //import React, { useEffect } from "react";
 import React from 'react';
-import './App.css';
-import {CartProvider} from "./CartContext"
+import './App.scss';
+
 //Routeador
 import {BrowserRouter , Switch, Route} from 'react-router-dom';
 
@@ -17,31 +17,29 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <CartProvider>
       <div className="App">
-      <BrowserRouter>
-        <Navbar>
-          <ItemListCarrito/>
-        </Navbar>
-          <Switch>
-            <Route path="/category/:categoryId">
-              <ItemListContainer/>
-            </Route>
-            <Route path="/item/:idProducto">
-              <ItemDetailContainer/>
-            </Route>
-            <Route path="/cart/:codigoItem">
-              <Cart/>
-            </Route>
-            <Route path="/">
-              <ItemListContainer/>
-            </Route>
-          </Switch>
-        
-        <Footer />
-      </BrowserRouter>
-    </div>
-  </CartProvider>
+        <BrowserRouter>
+          <Navbar>
+            <ItemListCarrito/>
+          </Navbar>
+            <Switch>
+              <Route path="/category/:categoryId">
+                <ItemListContainer/>
+              </Route>
+              <Route path="/item/:idProducto">
+                <ItemDetailContainer/>
+              </Route>
+              <Route path="/cart/:codigoItem">
+                <Cart/>
+              </Route>
+              <Route path="/">
+                <ItemListContainer/>
+              </Route>
+            </Switch>
+          
+          <Footer />
+        </BrowserRouter>
+      </div>
   );
 }
 

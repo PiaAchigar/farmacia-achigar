@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 //sacar todo de aca y llevarlo a itemDetail / capturo el numero seleccionado con el context number = useState q esta en CartContext
-export default function ItemCount( {stock, add}){
+export default function ItemCount({stock, add}){
  
   //console.log(props)
   const [count , setCount] = useState(1);

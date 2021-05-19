@@ -1,14 +1,14 @@
 import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount"
 import { useState , useContext} from "react"
-import {CartContext} from "../../CartContext"
+import { CartContext } from "../../CartContext"
 import ProductosJson from "../../productos.json"
 import {Link, useParams} from  'react-router-dom'
 
 //con el context tengo q lograr guardarme value={idProd?.codigo} cuando aprete "agregar"
 export default function ItemDetail(){
     const idProd = useParams()
-    const {arrayCart} = useContext(CartContext) 
+    const {arrayCart, addItem} = useContext(CartContext) 
    
     let [isClecked, setIsClicked] = useState(true)
     const product = ProductosJson.find((p)=> p.id == idProd.idProducto)
@@ -16,10 +16,8 @@ export default function ItemDetail(){
     function onAdd(event){
         setIsClicked(false)
         const cantProducts = event.target.value
-        console.log("onAdd:"+ cantProducts)
-        console.log(arrayCart)//(product,cantProducts)
-        //addItem(product,cantProducts)
-
+        console.log("onAdd:", cantProducts)
+        addItem(product,cantProducts)
     }
     return(
         <div className="div-itemDetail">

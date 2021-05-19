@@ -1,8 +1,12 @@
 .div-countainer{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap:15px;
-    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //grid-template-columns: repeat(4, 1fr);
+    //grid-gap:15px;
+    //margin: 2%;
+    //grid-auto-flow: row dense;
     //border: 1px solid red;
-    flex-direction: row;
+    //flex-direction: row;  
+      
 }
