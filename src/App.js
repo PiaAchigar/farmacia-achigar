@@ -29,7 +29,7 @@ function App() {
               <Route path="/item/:idProducto">
                 <ItemDetailContainer/>
               </Route>
-              <Route path="/cart/:codigoItem">
+              <Route>
                 <Cart/>
               </Route>
               <Route path="/">
@@ -45,3 +45,4 @@ function App() {
 
 export default App;
 
+//Todo: Agregar propTypes

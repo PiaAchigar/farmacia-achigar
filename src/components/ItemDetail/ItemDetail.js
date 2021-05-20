@@ -14,10 +14,10 @@ export default function ItemDetail(){
     const product = ProductosJson.find((p)=> p.id == idProd.idProducto)
     
     function onAdd(event){
-        setIsClicked(false)
-        const cantProducts = event.target.value
+        const cantProducts = event.target.value.parseInt
         console.log("onAdd:", cantProducts)
         addItem(product,cantProducts)
+        setIsClicked(false)
     }
     return(
         <div className="div-itemDetail">
@@ -28,15 +28,18 @@ export default function ItemDetail(){
                <h4>{product?.descripcion}</h4>
                
                 {isClecked ?
-                    (<>
+                    (
+                    <>
                         {product?.tamanio}----${product?.precio}
                         <ItemCount stock = {product?.stock} add = {onAdd}/>
-                    </>)
-                    :(<>
-                    <Link exact to = {`/Cart/${product?.codigo}`} className="link-item">
+                    </>
+                    ):(
+                    <>
+                    <Link exact to = {`/cart`} className="link-item">
                         <button className="btn-ir">Ir al Carrito</button>
                     </Link>
-                    </>)
+                    </>
+                    )
                 }
         </div>
     )
