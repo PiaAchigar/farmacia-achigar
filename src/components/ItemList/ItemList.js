@@ -3,6 +3,7 @@ import { useState , useEffect } from "react";
 import Item from "../Item/Item";
 import { useParams } from "react-router-dom";
 import ProductosJson from "../../productos.json";
+import PathBar from "../Pathbar/Pathbar"
 
 export default function ItemList(){
     const props = useParams()
@@ -31,6 +32,8 @@ export default function ItemList(){
     },[props])
     
     return(
+        <>
+        <PathBar ruta = {props.categoryId || ""}/>
         <div className="div-countainer">
             {
                 arrayFilterProducts.length > 0 ? (
@@ -43,6 +46,7 @@ export default function ItemList(){
             }
           
         </div>
+        </>
     )
 }
 //https://raw.githubusercontent.com/PiaAchigar/mockejson/main/productos.json

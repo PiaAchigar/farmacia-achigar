@@ -1,66 +1,81 @@
 import {useState, createContext} from "react";
-//import ProductosJson from "./productos.json"
 
 export const CartContext = createContext({}) // lo importo cuando quiero usar la info de acá
-//export const CartProvider = CartContext.Provider
+
 export const CartProvider = ({children}) =>{ // provee de la info, se usa solo 1 vez haciendo wrap (en app) a los compon que quiero q accedan a la info, la pasa
-    let [quantity, setQuantity] = useState(0)
-    const [arrayCart,setArrayCart] = useState([])
+    const [quantity, setQuantity] = useState(0)
+    const [cart,setCart] = useState([]) 
 
-    //si item no esta en arrayCart, sumarlo
-    //isInCart(codigo) true/false
-    const getItem = (code)=>{
-        return arrayCart.find((obj) => obj.codigo === code)
-    }
-    const isInCart = (code) => {
-        return code === undefined ? undefined : getItem(code) !== undefined
-    }
-    //addItem(item, )
-    const addItem = (item, number)=>{
-        const newCart = [...arrayCart]
-        console.log("addItem:", item)
-        console.log("number:",number)
-        if(isInCart(item.codigo)){
-            newCart[newCart.finIndex(prop => prop.codigo === item.codigo)].quantity+= number
-            setArrayCart(newCart)
-            //console.log(quantity = quantity + number)
-            setQuantity(parseInt(quantity+= number))
-            return
-            //setQuantity(item.quantity= item.quantity + number)
-        }else{
-            item.quantity = number
-            newCart.push(item)
-            setArrayCart(newCart)
-            console.log(quantity = quantity,parseInt(number))
-            setQuantity(quantity+= number)
-            console.log(quantity)
+    const addToCart = (item, number) => {
+        const newCart = [...cart]
+        //Verificar si existe en el carrito
+        const findItem = isInCart(item);
+        //Si existe en el carrito
+        if(findItem) {
+            newCart[newCart.findIndex(prod => prod.id === item.id)].quantity += parseInt(number); //o .quantity++
+            setCart(newCart);
+            return;
         }
-        //console.log("context:"+quantity)
-        console.log(arrayCart)
+        //Si no esta en el carrito
+        item.quantity = parseInt(number);
+        newCart.push(item);
+        setCart(newCart);
     }
+    const isInCart = item => cart.find(product => product.id === item.id)
+   
+    
 
-    //removeItem(itemId)
+  
+    // const isInCart = code => {
+    //     let varItem = {}//probe con [] "" y {}
+    //     console.log("code en isInCart" + code)
+    //     console.log("arrayLength:" + arrayCart.length)
+    //     if(arrayCart.length > 0){
+    //         varItem = arrayCart.filter(prod => prod.codigo === code)
+    //         console.log("array , varItem:" + varItem)// undefined o nada
+    //         if(varItem.codigo === code){
+    //             console.log("está" + varItem)
+    //             return true
+    //         }
+    //     }
+    //     return false
+    // }
+    // const addItem = (item, number)=>{
+    //     const newCart = [...arrayCart]
+    //     if(isInCart(item.codigo)){//  está
+    //         const newProd = newCart.filter(prod => prod.codigo === item.codigo)
+    //         console.log("newProd:"+ newProd)
+    //         const newProdQuantity = newProd.quantity+= number  // aca revienta
+    //         console.log("newProdQuantity:"+ newProd)
+    //         newCart.push(newProdQuantity)
+    //         //newCart[newCart.finIndex(prop => prop.codigo === item.codigo)].quantity+= number
+    //         setArrayCart(newCart)
+    //         console.log(newProd.quantity + number)
+    //         setQuantity(newProd.quantity + number)
+    //     }else{ // no está
+    //         item.quantity = number
+    //         console.log("number:"+ number)
+    //         console.log("item.quantity:"+ item.quantity)
+    //         console.log(quantity + number)// el + lo toma como concatenacion
+    //         setQuantity(quantity + number)
+    //         newCart.push(item)
+    //         setArrayCart(newCart)  
+    //     }
+    // }
+
     const removeItem = (itemId) => {
-        return isInCart(itemId) ? setArrayCart(arrayCart.filter((item) => {return item.codigo !== itemId})) : undefined
+        const newCart = cart.filter(item => item.id !== itemId)
+        setCart(newCart)
     }
 
     const clean = () => {
-        setArrayCart([]);
-        return
+        setCart([]);
     }
-    //cleat() limpiar todo el arrayCart
+    //mantener consistencia, como?
 
-
-    //mantener consistencia
-
-    
     return(
-        <CartContext.Provider value={{arrayCart, addItem, quantity, removeItem, clean}}>
+        <CartContext.Provider value={{cart, addToCart, quantity, removeItem, clean}}>
             {children}
         </CartContext.Provider>
     )
 }
-// {arrayCart, 
-//     addItem, 
-//     isInCart, 
-//     quantity}

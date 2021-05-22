@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
     .precio-total{
         font-size: 2rem;
     }
@@ -22,6 +24,7 @@
             }
             .remove{
                 padding: 0 1rem 0 4rem;
+                cursor: pointer;
             }
         }
     }

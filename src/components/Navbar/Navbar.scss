@@ -6,15 +6,18 @@
     flex-direction: column;
     hr{
         width: 98%;
-        border:0.5px solid #a8a8a8;
+        //color: gray;
+        //border:0.5px solid #a8a8a8;
+        box-shadow:1px 0px 7px 1px rgb(163, 163, 163);
         margin: .5rem 0 .5rem 0;
     }
     .ham-buscar-carro{
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         width: 100%;
         height: 50px;
-        background-color: #0a994a80;
+        background-color: #1258329c;
+        padding: .5rem 0;
         .ham{
             width: 35px;
             display: flex;
@@ -25,6 +28,7 @@
                 width: 50%;
                 height: 100vh;
                 cursor: pointer;
+                margin-left: .5rem;
                 opacity: 1;
                 -webkit-animation: appear 1s ease-in-out;
                 animation: appear 0.5s ease-in-out;
@@ -96,7 +100,6 @@
                     padding-left: 70%;
                     cursor: pointer;
                 }
-              
                 ul {
                 display: flex;
                 flex-direction: column;
@@ -131,34 +134,35 @@
              justify-content: space-evenly;
              img{
                  width: 8.4rem;
+                 margin-left: .6rem;
              }
              input{ // max-width: 768
                  display: none;
              }
-             button{
+             .lupa{
+                 position: absolute;
                  border-radius: 10px;
-                 margin-left: 30px;
-                 margin-right: 0;
                  width: 50px;
                  height: 50px;
-                 right: 5rem;
+                 right: 4.2rem;
                  img{
+                     padding: 0;
+                     margin: 0;
                      width: 35px;
-                     justify-content: center;
                  }
              }
          }
         .boton-carro{
             position: absolute;
-            left: 2.9rem;
+            right: 1rem;
              border-radius: 10px;
              width: 50px;
              height: 50px;
-             @media screen and (min-width: 425px) {
-                 //right:-20;
-                 //margin-left: calc(30vw - .9rem);
-                 
+             @media screen and (min-width: 768px) {
+                position: absolute;
+                right: 2rem;
              }
+             
              
         }
      }
@@ -192,7 +196,7 @@
                         }
                         .lupa{
                             position: absolute;
-                            right: 1rem;
+                            right: 4.2rem;
                         }
                     }
               
@@ -209,8 +213,8 @@
                     justify-content: space-evenly;
                     input{
                         display: flex;
-                        margin: 0 5rem 0 2rem;
-                        width: 60%;
+                        margin: 0 2rem 0 2rem;
+                        width: 70%;
                         border:0.5px solid #a8a8a8;
                         border-radius: 10px;
                     }
@@ -219,7 +223,11 @@
                     }
                     .lupa{
                         position: absolute;
-                        right: 1.5rem;
+                        right: 6rem;
+                        @media screen and (min-width: 1024px){
+                            position: absolute;
+                            right: 8rem;
+                        }
                     }
                 }
             }
@@ -252,6 +260,8 @@
             }
         }
     }
+    
+
     @media screen and (min-width: 1200px){
         .nav-container{
             .ham-buscar-carro{
@@ -271,7 +281,11 @@
                     }
                     .lupa{
                         position: absolute;
-                        right: 2rem;
+                        right: 8rem;
+                        @media screen and (min-width: 1200px){
+                        position: absolute;
+                        right: 16rem;
+                        }
                     }
                 }
             }

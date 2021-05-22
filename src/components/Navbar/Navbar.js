@@ -9,7 +9,7 @@ import { MdMenu } from "react-icons/md"
 import {CartContext} from "../../CartContext"
 import Cartwidget from "../Cartwidget/Cartwidget"
 import ItemListCarrito from "../ItemListCarrito/ItemListCarrito"
-import Pathbar from "../Pathbar/Pathbar"
+
 
 //Imags
 import logoHunko from "../../assets/HunkoLogo.jpg"
@@ -17,13 +17,6 @@ import logoHunkoBN from "../../assets/HunkoLogoBN.png"
 import lupa from "../../assets/lupa.png"
 
 //Paginas
-// import Home from "./pages/Home";
-// import Carrito from "./pages/Carrito";
-// import Dermocosmetica from "./pages/Dermocosmetica";
-// import Farmacia from "./pages/Farmacia";
-// import Maquillaje from "./pages/Maquillaje";
-// import Perfumeria from "./pages/Perfumeria";
-// import Ofertas from "./pages/Ofertas";
 
 //Style
 import "./Navbar.scss";
@@ -31,20 +24,27 @@ import "./Navbar.scss";
 const Navbar = () => {
     const [IsOpen, setIsOpen] = useState(false);
     const [widthW, setWidthW] = useState(window.innerWidth);
-    const {quantity} = useContext(CartContext)
+    const {cart} = useContext(CartContext)
+    const [quantity, setQuantity] = useState(0)
     const handleClick = () => {
     setIsOpen(!IsOpen);
     };
 
-    useEffect( ()=>{
-        setWidthW(window.innerWidth)
-    }, [widthW])
-
+    const calulateQuantity = cartArray =>{
+        const total = cartArray.reduce((totalQuantity,product) => totalQuantity+= product.quantity, 0)
+        setQuantity(total)
+    }
+    
     const [nav, setNav] = useState(false)
 
     const handleNav = () => {
     setNav(!nav);
     }
+
+    useEffect( ()=>{
+        setWidthW(window.innerWidth)
+        calulateQuantity(cart)
+    }, [widthW, cart])
 //todo: grabacion 1:10 de Router y Navegacion para hacer el componente BUSQUEDA
     return(
        <nav className="nav-container">
@@ -139,7 +139,6 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <Pathbar/>
         </nav>
 
     )

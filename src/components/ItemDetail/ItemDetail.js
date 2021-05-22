@@ -8,15 +8,15 @@ import {Link, useParams} from  'react-router-dom'
 //con el context tengo q lograr guardarme value={idProd?.codigo} cuando aprete "agregar"
 export default function ItemDetail(){
     const idProd = useParams()
-    const {arrayCart, addItem} = useContext(CartContext) 
+    const { addToCart} = useContext(CartContext) 
    
     let [isClecked, setIsClicked] = useState(true)
     const product = ProductosJson.find((p)=> p.id == idProd.idProducto)
     
     function onAdd(event){
-        const cantProducts = event.target.value.parseInt
+        const cantProducts = event.target.value
         console.log("onAdd:", cantProducts)
-        addItem(product,cantProducts)
+        addToCart(product,cantProducts)
         setIsClicked(false)
     }
     return(
@@ -35,8 +35,8 @@ export default function ItemDetail(){
                     </>
                     ):(
                     <>
-                    <Link exact to = {`/cart`} className="link-item">
-                        <button className="btn-ir">Ir al Carrito</button>
+                    <Link to="/cart" className="link-item">
+                        <span className="btn-ir">Ir al Carrito</span>
                     </Link>
                     </>
                     )
@@ -49,10 +49,10 @@ export default function ItemDetail(){
 // checked={this.state.selectedOption === "Male"}
 //onChange={this.onValueChange}
 
-{/* <label>
+/* <label>
 <input type="radio" value={idProd?.codigo} className="input-presentacion" name = "selected" onChange = {handelChange}/>
 {idProd?.tamanio}----${idProd?.precio}
-</label> */}
+</label> */
 // const [itemData, setitemData] = useState({
 //     isAgree : false, //checkbox
 //     selected : "" //radio

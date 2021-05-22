@@ -15,13 +15,17 @@
         display: flex;
         flex-direction: column;
         //si quiero modificar Cartwidget desde acá, como hago?
-        h3{//no lo toma
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 0;
-        }
-        h4{
-            text-align: center;
+        // h3{//no lo toma
+        //     font-size: 2rem;
+        //     text-align: center;
+        //     margin-top: 0;
+        // }
+        // h4{
+        //     text-align: center;
+        // }
+        .carro{
+            text-decoration: nonn;
+            color:gray;
         }
     }
     .ItemCount{

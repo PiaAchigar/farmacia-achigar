@@ -32,7 +32,7 @@ export default function ItemCount({stock, add}){
           <button onClick={sumar}>+</button>
         </div>
         <p>Stock:{stock}</p>
-         <button className="btn-agregar" onClick={add} value = {count}>Agregar</button>
+         <button className="btn-agregar" onClick={add} value={count}>Agregar</button>
       </div>
   )
 }
