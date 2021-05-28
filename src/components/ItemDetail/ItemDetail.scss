@@ -2,24 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: space-around;
     border: 1px solid gray;
-    margin: 3rem 10rem 3rem 3rem;
+    margin: 3rem 10rem 10rem 3rem;
     border-radius: 10px;
-    padding: 2rem 0 2rem 16rem;
+    padding: 5rem 0 10rem 16rem;
     width: 60%;
-
     img{
         position: absolute;
-        left:9rem;
+        left:8rem;
+        z-index:99;
         &:hover{
             transform: scale(1.2);
         }
     }
     
-    h4{ width: 40%;
-        margin: 0 5rem 1rem 5rem;
+    h4{ 
+        width: 40%;
+        margin: 0 0 5rem 5rem;
         padding: 0 8rem;
-        text-align: center;
+        text-align: auto;
+        width: 300px;
     }
     .radio{
         display: flex;
@@ -28,22 +31,27 @@
             list-style-type: none;
         }
     }
-    
-      .btn-ir{
-        margin: 3rem 1rem;
-        padding: .8rem 2rem;
-        color:white;
-        background-color: green;
-        border-radius: 10px;
-        border: 1px solid gray;
-        font-size: 1rem;
-        &:hover{
-            transform: scale(1.1);
-            cursor: pointer;
-         }
-    }
-   
-    
+      a{
+        text-decoration: none;
+      }
+    .btn-ir{
+      text-decoration: none;
+      margin: 5rem 1rem;
+      padding: .8rem 2rem;
+      color:white;
+      background-color: green;
+      border-radius: 10px;
+      border: 1px solid gray;
+      font-size: 1rem;
+      &:hover{
+          transform: scale(1.1);
+          cursor: pointer;
+      }
+  }
+      
+     
+      
+     
 
     @-webkit-keyframes appear {
         from {

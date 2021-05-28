@@ -6,11 +6,17 @@ import './index.scss';
 import App from './App';
 import {CartProvider} from "./CartContext"
 
+import { Provider } from "react-redux"
+
+import { store } from "./state"
+
 ReactDOM.render(
   <React.StrictMode>
-    <CartProvider>
-      <App />
-    </CartProvider>
+    <Provider store={store}>
+      <CartProvider>
+        <App />
+      </CartProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -5,24 +5,27 @@ import { CartContext } from "../../CartContext"
 import ProductosJson from "../../productos.json"
 import {Link, useParams} from  'react-router-dom'
 
+import { useSelector } from "react-redux";
+
 //con el context tengo q lograr guardarme value={idProd?.codigo} cuando aprete "agregar"
 export default function ItemDetail(){
-    const idProd = useParams()
+    const { idProducto } = useParams()
     const { addToCart} = useContext(CartContext) 
    
     let [isClecked, setIsClicked] = useState(true)
-    const product = ProductosJson.find((p)=> p.id == idProd.idProducto)
+    //const product = ProductosJson.find((p)=> p.id == idProd.idProducto)
     
     function onAdd(event){
         const cantProducts = event.target.value
-        console.log("onAdd:", cantProducts)
         addToCart(product,cantProducts)
         setIsClicked(false)
     }
+
+    const product = useSelector((state) => state.products.find( p => p.id === idProducto ) )
     return(
         <div className="div-itemDetail">
            
-           <img src= {product.foto ? require(`../multimedia/${product.foto}`).default : ''} style = {{height: "20rem"}} alt="img"/>
+           <img src= {product.foto} style = {{height: "20rem"}} alt="img"/>
                <h3>{product?.marca}</h3>
                <h3>{product?.nombre}</h3> 
                <h4>{product?.descripcion}</h4>

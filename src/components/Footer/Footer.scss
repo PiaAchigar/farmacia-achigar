@@ -3,7 +3,13 @@
     flex-direction: column;
     background-color: gray;
     align-items: center;
-    
+    top:auto;
+    bottom: -1rem;
+    //right: 0;
+    width: 100%;
+    //position: fixed;
+    //padding-bottom: 10px;
+    background-color: #c0c0c0;
     .sucursales{
         margin: 0;
         h2{
@@ -12,3 +18,10 @@
         }
     }
 }
+
+// .Footer{
+//     display: flex;
+//     justify-content: center;
+    
+//     color: #000000;
+// }
