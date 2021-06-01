@@ -16,8 +16,6 @@ import ItemListCarrito from "../ItemListCarrito/ItemListCarrito";
 import logoHunko from "../../assets/HunkoLogo.jpg";
 import logoHunkoBN from "../../assets/HunkoLogoBN.png";
 
-//Paginas
-
 //Style
 import "./Navbar.scss";
 
@@ -49,7 +47,7 @@ const Navbar = () => {
     setWidthW(window.innerWidth);
     calulateQuantity(cart);
   }, [widthW, cart]);
-  //todo: grabacion 1:10 de Router y Navegacion para hacer el componente BUSQUEDA
+
   return (
     <nav className="nav-container">
       <hr />

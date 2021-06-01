@@ -2,26 +2,15 @@ import "./ItemList.scss";
 import { useEffect } from "react";
 import Item from "../Item/Item";
 import { useParams } from "react-router-dom";
-//import ProductosJson from "../../productos.json";
 import PathBar from "../Pathbar/Pathbar";
 import { getFirestore } from "../../firebase/index";
 
 import { useSelector, useDispatch } from "react-redux";
 import { types, status } from "./../../state";
 
-//import productosJson from "./../../products";
-
 const db = getFirestore();
 const itemCollection = db.collection("items");
 
-/*
-const exportar = async () => {
-  for await (const prod of productosJson) {
-    await itemCollection.add(prod);
-  }
-};
-exportar();
-*/
 export default function ItemList() {
   const props = useParams();
   const dispatch = useDispatch();
@@ -48,7 +37,7 @@ export default function ItemList() {
   /*
     useEffect(() =>{
         let arrayFilter = items.filter((product) =>product.categoria === props.categoryId)
-            if(!props.categoryId){ // es lo mismo q decis "si es "undefined" entrá?"
+            if(!props.categoryId){ 
                setArrayFilterProducts(items)
             }  else{
                 setArrayFilterProducts(arrayFilter)
@@ -73,10 +62,7 @@ export default function ItemList() {
       <PathBar ruta={props.categoryId || ""} />
       <div className="div-countainer">
         {productState.status === status.LOADING && (
-          <div style={{ position: "absolute", border: "1px solid red" }}>
-            {" "}
-            Cargando...{" "}
-          </div>
+          <div style={{ position: "absolute" }}> Cargando... </div>
         )}
 
         {productState.searchString.length === 0 &&
@@ -103,52 +89,17 @@ export default function ItemList() {
       </div>
     </>
   );
-  /*
-    return(
-        <>
-        <PathBar ruta = {props.categoryId || ""}/>
-        <div className="div-countainer">
-        {
-            isEmptyCategory ? (
-                <p>Esta categoría actualmente no tiene productos</p>
-            ) : (
-                arrayFilterProducts.length > 0 ? (
-                    arrayFilterProducts.map((prod, key)=>{
-                        return <Item product ={prod} />
-                    })
-                ) : (
-                    <p></p>
-                )
-            )
-        }
-          
-        </div>
-        </>
-    )
-    */
 }
 
-// const getProducts = (products)=>{
-//     return new Promise((res, rej)=>{
-//         setTimeout(()=>{
-//             return res(products)
-//         },200)
-//     })
-// }
-
-// useEffect(()=>{
-//     getProducts(ProductosJson).then(result=>{
-//         //console.log(result)
-//         let arrayFilter = result.filter((product) =>product.categoria === props.categoryId)
-//         setArrayFilterProducts(arrayFilter)
-//         if(!props.categoryId){
-//            setArrayFilterProducts(result)
-//         }
-//         //console.log(arrayFilterProducts)
-//         return arrayFilterProducts
-//     })
-
-// },[props])
+/*
+import productosJson from "./../../products";
+const exportar = async () => { //para pushear un array al firestore del firebase
+  for await (const prod of productosJson) {
+    await itemCollection.add(prod);
+  }
+};
+exportar();
+*/
 
 //https://raw.githubusercontent.com/PiaAchigar/mockejson/main/productos.json
 //products.map((perfumes)=>{le paso el perfume x props a Item})
