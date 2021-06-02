@@ -2,7 +2,6 @@ import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState, useContext } from "react";
 import { CartContext } from "../../CartContext";
-import ProductosJson from "../../productos.json";
 import { Link, useParams } from "react-router-dom";
 
 import { useSelector } from "react-redux";

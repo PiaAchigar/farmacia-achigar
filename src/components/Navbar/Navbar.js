@@ -137,7 +137,7 @@ const Navbar = () => {
             <Cartwidget itemsQuantity={quantity} />
           </button>
         )}
-        {IsOpen && <ItemListCarrito />}
+        {IsOpen && <ItemListCarrito setIsOpen={setIsOpen} />}
       </div>
       <hr />
       <div className="main-categories">

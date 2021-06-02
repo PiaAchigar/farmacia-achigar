@@ -1,7 +1,6 @@
 import "./Item.scss";
 import { Link } from "react-router-dom";
 export default function Item({ product }) {
-  console.log(product);
   return (
     <Link exact to={`/item/${product.id}`} className="link-item">
       <div className="card">

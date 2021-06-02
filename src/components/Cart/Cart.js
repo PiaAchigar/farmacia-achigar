@@ -1,18 +1,11 @@
-//https://www.youtube.com/watch?v=02ieJ1YXZM4
-//https://www.youtube.com/watch?v=02ieJ1YXZM4&t=761s
-
 import { useContext, useEffect } from "react";
 import { CartContext } from "../../CartContext";
 import { Link } from "react-router-dom";
 import "./Cart.scss";
-//import Item from "../Item/Item"
 
 export default function Cart() {
-  const { cart } = useContext(CartContext); //para usar el cart
+  const { cart } = useContext(CartContext);
   const { removeItem } = useContext(CartContext);
-  //para mostrar cuantos productos va hago cart.length
-  //const {codigoItem} = useParams();
-  //console.log(codigoItem)
   useEffect(() => {
     console.log(cart);
   }, [cart]);
