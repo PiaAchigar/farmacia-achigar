@@ -1,4 +1,4 @@
-# E-commerce de Farmacia Hunko.<img alt="Logo" align="center" src="https://firebasestorage.googleapis.com/v0/b/hunko-farmacia.appspot.com/o/Hunko-SinFondo.png?alt=media&token=ca4a72c3-eb57-41a9-af67-e1987e7f4611" width="20%" />
+# E-commerce de Farmacias Hunko.<img alt="Logo" align="center" src="https://firebasestorage.googleapis.com/v0/b/hunko-farmacia.appspot.com/o/Hunko-SinFondo.png?alt=media&token=ca4a72c3-eb57-41a9-af67-e1987e7f4611" width="20%" />
 _Hola mi nombre es María Pía creadora del Proyecto "Farmacias Hunko" una SPA(Single Pague Aplication) creada con React.js_
 Tiene 4 Categorias las cuales se puede apreciar en la barra de navegación: Ofertas, Dermocosmetica, Perfumeria y Farmacia.
 Utilicé la libreria React para la reutilización del codigo, acortar tiempos de carga y mayor intuicion de navegacion para el usuario.
