@@ -18,7 +18,7 @@ _Herramientas que utilicé para crear el proyecto_
 
 ## Instalación 🔧
 
-_Descargá el repo_
+_Descargá el repo_ <br>
 
 +Parate en la carpeta, con clic derecho abrí gitBash y corre:
 ```
