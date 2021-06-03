@@ -5,7 +5,7 @@ Se utiliza la libreria React para una optima utilizacion del codigo, acortar tie
 
 ## Navegacion.
 <p align='center'>
-<img src="https://firebasestorage.googleapis.com/v0/b/hunko-farmacia.appspot.com/o/EntregaReact.gif?alt=media&token=dcc7cea2-5556-4ec6-a95a-d5d7e7644c90" width='600' alt='gif'>
+<img src="https://firebasestorage.googleapis.com/v0/b/hunko-farmacia.appspot.com/o/EntregaReact.gif?alt=media&token=dcc7cea2-5556-4ec6-a95a-d5d7e7644c90" width='650' alt='gif'>
 </p>
 
 
