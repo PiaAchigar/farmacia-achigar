@@ -19,16 +19,17 @@ _Herramientas que utilicé para crear el proyecto_
 ## Instalación 🔧
 
 _Descargá el repo_
-+Abrí gitBash y corre
+
++Parate en la carpeta, con clic derecho abrí gitBash y corre:
 ```
 npm install
 ```
 
-+ Corres la app en modo develop.
++ Corres la app en modo develop:
 ```
 npm run start
 ```
-Te vas al navegador y debería estar corriendo en el puerto o lo abris desde consola en  [http://localhost:3000](http://localhost:3000)
+Te vas al navegador o lo abris desde consola en  [http://localhost:3000](http://localhost:3000)
 
 
 
