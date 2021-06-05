@@ -44,3 +44,12 @@ const productReducer = (state = initState, action) => {
 const store = createStore(productReducer, applyMiddleware(thunk));
 
 export { status, types, store };
+
+//          mandar       obtener
+// const { useDispatch, useSelector } from "redux"
+// const dispatch = useDispatch()
+//https://www.digitalocean.com/community/tutorials/redux-redux-thunk-es
+
+//ejemplo: https://www.youtube.com/watch?v=FOWO07pImCg&list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk&index=5
+//<li>{props.arreglo.join(", ")}</li>
+//<li>{props.objeto.nombre + " - " + props.objeto.correo}</li>

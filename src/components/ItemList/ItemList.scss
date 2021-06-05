@@ -1,12 +1,14 @@
-.div-countainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    //grid-template-columns: repeat(4, 1fr);
-    //grid-gap:15px;
-    //margin: 2%;
-    //grid-auto-flow: row dense;
-    //border: 1px solid red;
-    //flex-direction: row;  
-      
+.div-countainer {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  //margin: 1rem 1rem;
+  //grid-template-columns: repeat(4, 1fr);
+  //grid-gap:15px;
+  //margin: 2%;
+  //grid-auto-flow: row dense;
+  //border: 1px solid red;
+  //flex-direction: row;
 }

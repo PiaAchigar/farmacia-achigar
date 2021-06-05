@@ -1,4 +1,9 @@
-.home{
+p {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  .home {
     text-decoration: none;
     color: black;
+  }
 }

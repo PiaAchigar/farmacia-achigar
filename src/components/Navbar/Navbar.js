@@ -73,7 +73,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/category/Perfumeria"
+                      to="/category/perfumeria"
                       onClick={handleNav}
                       className="sidenav__link"
                     >
@@ -82,7 +82,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/category/Dermocosmética"
+                      to="/category/dermocosmética"
                       onClick={handleNav}
                       className="sidenav__link"
                     >
@@ -91,7 +91,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/category/Farmacia"
+                      to="/category/farmacia"
                       onClick={handleNav}
                       className="sidenav__link"
                     >
@@ -132,11 +132,9 @@ const Navbar = () => {
             }}
           />
         </div>
-        {quantity > 0 && (
-          <button className="boton-carro" onClick={handleClick}>
-            <Cartwidget itemsQuantity={quantity} />
-          </button>
-        )}
+        <button className="boton-carro" onClick={handleClick}>
+          <Cartwidget itemsQuantity={quantity} />
+        </button>
         {IsOpen && <ItemListCarrito setIsOpen={setIsOpen} />}
       </div>
       <hr />
@@ -195,3 +193,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// {quantity > 0 && (
+//   <button className="boton-carro" onClick={handleClick}>
+//     <Cartwidget itemsQuantity={quantity} />
+//   </button>
+// )}

@@ -8,18 +8,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { types, status } from "./../../state";
 
 const db = getFirestore();
-const itemCollection = db.collection("items");
+const itemCollection = db.collection("items").where("stock", ">", 0);
 
 export default function ItemList() {
   const props = useParams();
   const dispatch = useDispatch();
   const productState = useSelector((state) => state);
 
+  //db.collection('items', ref => ref.where('stock', '>', '0'))
+
   useEffect(() => {
     dispatch({ type: types.PRODUCT_LOAD_INIT });
     itemCollection
       .get()
       .then((querySnapshot) => {
+        // const products = db.collection("items", (ref) =>
+        //   ref.where("stock", ">", "0")
+        //);
         const products = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -44,7 +49,10 @@ export default function ItemList() {
       <PathBar ruta={props.categoryId || ""} />
       <div className="div-countainer">
         {productState.status === status.LOADING && (
-          <div style={{ position: "absolute" }}> Cargando... </div>
+          <div style={{ position: "absolute" }} style={{ textAlign: "center" }}>
+            {" "}
+            Cargando...{" "}
+          </div>
         )}
 
         {productState.searchString.length === 0 &&

@@ -13,8 +13,7 @@ export default function Purchaseorder() {
   const { cart, clean } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  //cloud functions- transaccion para restar el stock
-  //https://firebase.google.com/docs/functions/firestore-events     onCreate -> en la carpeta function q se crea del firestate
+
   const newOrder = async () => {
     try {
       if (
@@ -41,11 +40,20 @@ export default function Purchaseorder() {
           0
         ),
       };
-      console.log(order);
-      //controlar que este ebuyer completo
-      await db.collection("orders").add(order);
+      const orderRest = await db.collection("orders").add(order);
+
+      // ejecutar transaccion (no es lo mejor) -> ver onCreate Cloud Functions
+      for await (let item of cart) {
+        await db
+          .collection("items")
+          .doc(item.id)
+          .update({ stock: item.stock - item.quantity });
+      }
       clean();
-      setMessage("Su orden fue enviada con éxito!");
+      setBuyerEmail("");
+      setBuyerName("");
+      setBuyerPhone("");
+      setMessage("Su orden fue enviada con éxito! Orden ID:" + orderRest.id);
       setLoading(false);
     } catch (error) {
       setMessage(
@@ -54,34 +62,31 @@ export default function Purchaseorder() {
       console.log(error);
     }
   };
-  //console.log(product);
   return (
     <div className="purchaseOrder-wrapper">
       <h1>Orden de Compra</h1>
       <div className="description">
-        <div>
-          {cart.length > 0 ? (
-            cart.map((item, key) => {
-              return (
-                <div className="item-countainer">
-                  <h2>
-                    {item.nombre} / {item.marca}
-                  </h2>
-                  <img src={item.foto} style={{ height: "5rem" }} alt="img" />
-                  <div className="item-description">
-                    <p>Precio Unitario: {item.precio}</p>
-                    <p>Cantidad: {item.quantity}</p>
-                    <p>
-                      Subtotal: ${Number(item.precio) * Number(item.quantity)}
-                    </p>
-                  </div>
+        {cart.length > 0 ? (
+          cart.map((item, key) => {
+            return (
+              <div className="item-countainer">
+                <h2>
+                  {item.nombre} / {item.marca}
+                </h2>
+                <img src={item.foto} style={{ height: "5rem" }} alt="img" />
+                <div className="item-description">
+                  <p>Precio Unitario: {item.precio}</p>
+                  <p>Cantidad: {item.quantity}</p>
+                  <p>
+                    Subtotal: ${Number(item.precio) * Number(item.quantity)}
+                  </p>
                 </div>
-              );
-            })
-          ) : (
-            <p className="vacio">Carrito Vacio</p>
-          )}
-        </div>
+              </div>
+            );
+          })
+        ) : (
+          <p className="vacio">Carrito Vacio</p>
+        )}
       </div>
       <p className="total">
         Total:
@@ -93,16 +98,19 @@ export default function Purchaseorder() {
       </p>
       <div className="form-wrapper">
         <input
+          value={buyerEmail}
           placeholder="Email *"
           className="input-css"
           onChange={(e) => setBuyerEmail(e.target.value)}
         />
         <input
+          value={buyerPhone}
           placeholder="Telefono *"
           className="input-css"
           onChange={(e) => setBuyerPhone(e.target.value)}
         />
         <input
+          value={buyerName}
           placeholder="Nombre *"
           className="input-css"
           onChange={(e) => setBuyerName(e.target.value)}
@@ -125,3 +133,6 @@ export default function Purchaseorder() {
     </div>
   );
 }
+
+//cloud functions- transaccion para restar el stock
+//https://firebase.google.com/docs/functions/firestore-events     onCreate -> en la carpeta function q se crea del firestate
